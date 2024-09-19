@@ -1,3 +1,4 @@
+import "../App.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
