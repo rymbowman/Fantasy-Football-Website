@@ -1,22 +1,21 @@
 import "../App.css";
 import memberData from "../constants/data/memberData";
-const MemberCard = ({ name, nickname }) => {
+const MemberCard = () => {
   return (
-    <div
-      className="memberCard"
-      data-aos="flip-right"
-      data-aos-delay="300"
-      data-aos-duration="1200"
-    >
-      <img src="" alt={`pic of ${name}`} className="memberImg" />
-      <div className="container">
-        <h2>{name}</h2>
-        <p className="card-title">{nickname}</p>
-        <button className="button-members" id="Ryan-open">
-          Bio
-        </button>
-      </div>
-    </div>
+    <>
+      {memberData.map((member) => {
+        return (
+          <div className="container" key={member.id}>
+            <img src={member.img} alt={`pic of ${member.name}`} />
+            <h2>{member.name}</h2>
+            <p className="card-title">{member.nickName}</p>
+            <button className="button-members" id="Ryan-open">
+              Bio
+            </button>
+          </div>
+        );
+      })}
+    </>
   );
 };
 

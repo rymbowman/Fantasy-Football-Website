@@ -16,6 +16,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 2,
     name: "Cole",
     nickName: "Impulsive Trader",
     bestPick: "",
@@ -28,6 +29,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 3,
     name: "Miah",
     nickName: "Father of Jose and Jesse",
     bestPick: "",
@@ -40,6 +42,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 4,
     name: "Carter",
     nickName: "Post-Prime",
     bestPick: "",
@@ -52,6 +55,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 5,
     name: "Jacob",
     nickName: "Good First Year",
     bestPick: "",
@@ -64,6 +68,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 6,
     name: "Kyle",
     nickName: "Jacob's Guardian",
     bestPick: "",
@@ -76,6 +81,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 7,
     name: "Jose",
     nickName: "Miah's Farm System",
     bestPick: "",
@@ -88,6 +94,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 8,
     name: "Jesse",
     nickName: "Fantasy Success of the Brown's Franchise",
     bestPick: "",
@@ -100,6 +107,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 9,
     name: "Micah",
     nickName: "Fantasy Punishment Dodger",
     bestPick: "",
@@ -112,6 +120,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 10,
     name: "Simon",
     nickName: "The Dangler",
     bestPick: "",
@@ -124,6 +133,7 @@ const memberData = [
     img: "",
   },
   {
+    id: 11,
     name: "Josh",
     nickName: "Conservative Trader",
     bestPick: "",
