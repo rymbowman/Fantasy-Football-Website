@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import "../App.css";
 const Sidebar = () => {
+  let button = document.querySelector("#btn");
+  let sideBar = document.querySelector(".sidebar");
+
+  button.onclick = function () {
+    sideBar.classList.toggle("active");
+  };
   return (
     <div className="sidebar">
       <div className="top">
