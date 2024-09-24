@@ -1,5 +1,5 @@
 import MemberCard from "../components/MemberCard";
-
+import "../App.css";
 const Members = () => {
   return (
     <div className="main-content">
