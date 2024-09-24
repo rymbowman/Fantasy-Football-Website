@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../App.css";
 const Sidebar = () => {
   return (
@@ -10,21 +11,21 @@ const Sidebar = () => {
       </div>
       <div className="league-img">
         <img
-          src="./Images/Liberty_Flames_logo.svg copy.png"
+          src="./images/Liberty_Flames_logo.svg copy.png"
           alt="A logo of Liberty University"
           className="league-img"
         />
       </div>
       <ul>
         <li>
-          <a href="./index.html">
+          <Link to="/">
             <i className="bx bxs-home-alt-2"></i>
             <span className="nav-item">Home Page</span>
-          </a>
+          </Link>
           <span className="tooltip">Home</span>
         </li>
         <li>
-          <a href="./league.html" id="league-info-sidebar">
+          <Link to="./league" id="league-info-sidebar">
             <i className="bx bxs-grid"></i>
             <span className="nav-item">League Info</span>
             <span>
@@ -33,7 +34,7 @@ const Sidebar = () => {
                 id="league-dropdown-arrow"
               ></i>
             </span>
-          </a>
+          </Link>
 
           <ul className="dropdown" id="league-dropdown">
             <li className="sidebar-dropdown-item">
@@ -52,14 +53,14 @@ const Sidebar = () => {
           <span className="tooltip">League</span>
         </li>
         <li>
-          <a href="./members.html">
+          <Link to="./members">
             <i className="bx bxs-user"></i>
             <span className="nav-item">Members</span>
-          </a>
+          </Link>
           <span className="tooltip">Members</span>
         </li>
         <li>
-          <a href="./history.html">
+          <Link to="./history">
             <i className="bx bxs-book"></i>
             <span className="nav-item">History</span>
             <span>
@@ -68,7 +69,7 @@ const Sidebar = () => {
                 id="history-dropdown-arrow"
               ></i>
             </span>
-          </a>
+          </Link>
           <ul className="dropdown" id="history-dropdown">
             <li className="sidebar-dropdown-item">
               <a href="#">Past Champions</a>
@@ -86,7 +87,7 @@ const Sidebar = () => {
           <span className="tooltip">History</span>
         </li>
         <li>
-          <a href="./resources.html">
+          <Link to="./resources">
             <i className="bx bxs-ball"></i>
             <span className="nav-item">Resources</span>
             <span>
@@ -95,7 +96,7 @@ const Sidebar = () => {
                 id="resources-dropdown-arrow"
               ></i>
             </span>
-          </a>
+          </Link>
           <ul className="dropdown" id="resources-dropdown">
             <li className="sidebar-dropdown-item">
               <a href="#">Trade Calculator</a>
