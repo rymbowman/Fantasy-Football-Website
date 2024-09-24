@@ -371,3 +371,148 @@
     opacity: 1;
   }
 }
+
+/*Members Page*/
+.members-leading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background-color: #222;
+  height: 250px;
+  color: white;
+}
+
+.members-h1 {
+  padding: 5px;
+  border-bottom: 1px solid lightblue;
+}
+
+.members-p {
+  padding-top: 5px;
+  font-style: italic;
+}
+
+.members-h2 {
+  text-align: center;
+  font-size: 36px;
+  font-family: "Times New Roman", Times, serif;
+  color: #071023;
+}
+
+.league-members-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
+
+.memberCard {
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #071023;
+}
+
+.member-img {
+  width: 300px;
+  height: 350px;
+  margin: 10px auto;
+  border: 2px solid #071023;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+
+.button-members {
+  padding: 2px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #071023;
+  width: 75px;
+  height: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: lightblue;
+  color: #071023;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 2px;
+}
+
+.button-members:hover {
+  filter: brightness(110%);
+}
+
+.sidebar.active ~ .members-page {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.main-content {
+  position: relative;
+  background-color: whitesmoke;
+  min-height: 100vh;
+  top: 0;
+  left: 80px;
+  transition: all 0.5s ease;
+  width: calc(100% - 80px);
+}
+
+.member-modal {
+  display: none;
+  z-index: 1;
+  left: auto;
+  top: 5%;
+  overflow: auto;
+  position: fixed;
+  width: 75%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.9);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.modal-content {
+  height: 90%;
+  width: 80%;
+  display: block;
+  overflow: auto;
+}
+
+.modal-content-header {
+  font-size: 36px;
+}
+
+.modal-content-text {
+  font-size: 20px;
+}
+
+.modal-close-button {
+  padding: 2px 10px;
+  border: 1px solid navy;
+  border-radius: 5px;
+  width: 75px;
+  height: 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  background-color: lightskyblue;
+  color: navy;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+}
+
+.modal-close-button:hover {
+  filter: brightness(110%);
+}

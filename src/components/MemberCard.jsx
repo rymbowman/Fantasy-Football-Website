@@ -1,3 +1,5 @@
+import "../App.css";
+import memberData from "../constants/data/memberData";
 const MemberCard = ({ name, nickname }) => {
   return (
     <div
