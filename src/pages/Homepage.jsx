@@ -1,11 +1,11 @@
+import CurrentSlideAction from "../components/CurrentSlideAction";
 import HomepageHeader from "../components/HomepageHeader";
-import HomepageImgCarousel from "../components/HomepageImgCarousel";
 
 const Homepage = () => {
   return (
     <div className="homepage">
       <HomepageHeader />;
-      <HomepageImgCarousel />
+      <CurrentSlideAction />
     </div>
   );
 };

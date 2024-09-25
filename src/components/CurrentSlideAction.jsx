@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import slidesData from "../constants/data/slidesData";
+import HomepageImgCarousel from "./HomepageImgCarousel";
 const CurrentSlideAction = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
@@ -10,8 +11,8 @@ const CurrentSlideAction = () => {
     }
     if (newIndex < 1) {
       newIndex = slidesData.length;
-      setSlideIndex(newIndex);
     }
+    setSlideIndex(newIndex);
   };
   // Thumbnail image controls
   const currentSlide = (n) => {
@@ -20,25 +21,21 @@ const CurrentSlideAction = () => {
 
   return (
     <>
-      <div className="slideshow-container">
-        {/* Your slides */}
-        <div className="slide">Slide 1</div>
-        <div className="slide">Slide 2</div>
-        <div className="slide">Slide 3</div>
+      <HomepageImgCarousel slideIndex={slideIndex} />
 
-        {/* Controls */}
-        <button onClick={() => plusSlides(-1)}>Prev</button>
-        <button onClick={() => plusSlides(1)}>Next</button>
+      {/* Controls */}
+      <button onClick={() => plusSlides(-1)}>Prev</button>
+      <button onClick={() => plusSlides(1)}>Next</button>
 
-        {/* Dots */}
-        <div className="dot-container">
-          {slidesData.map((_, i) => {
-            <span key={i} className={`dot`}></span>;
-          })}
-          <span className="dot" onClick={() => currentSlide(1)}></span>
-          <span className="dot" onClick={() => currentSlide(2)}></span>
-          <span className="dot" onClick={() => currentSlide(3)}></span>
-        </div>
+      {/* Dots */}
+      <div className="dotContainer">
+        {slidesData.map((_, i) => (
+          <span
+            key={i}
+            className={`dot ${i + 1 === slideIndex ? "active" : ""}`}
+            onClick={() => currentSlide(i + 1)}
+          ></span>
+        ))}
       </div>
     </>
   );

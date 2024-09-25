@@ -1,19 +1,20 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import "../App.css";
 const Sidebar = () => {
-  let button = document.querySelector("#btn");
-  let sideBar = document.querySelector(".sidebar");
+  const [isActive, setIsActive] = useState(false);
 
-  button.onclick = function () {
-    sideBar.classList.toggle("active");
+  const toggleSidebar = () => {
+    setIsActive(!isActive);
   };
+
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isActive ? "active" : ""}`}>
       <div className="top">
         <div className="logo">
           <h3>Flames Fantasy</h3>
         </div>
-        <i className="bx bx-menu" id="btn"></i>
+        <i className="bx bx-menu" id="btn" onClick={toggleSidebar}></i>
       </div>
       <div className="league-img">
         <img
