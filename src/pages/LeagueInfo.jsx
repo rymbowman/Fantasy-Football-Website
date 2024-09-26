@@ -1,38 +1,34 @@
+import DirectoryCard from "../components/DirectoryCard";
+
 const LeagueInfo = () => {
   return (
-    <>
-      <div className="directory-pages">
-        <a
-          href="./standings-rankings.html"
-          className="card-pathways"
-          id="standings-rankings-card"
-        >
-          <div>
-            <h3 className="card-heading">Standings/Rankings</h3>
-          </div>
-        </a>
-
-        <a href="" className="card-pathways">
-          <div>
-            <h3 className="card-heading">Schedules</h3>
-          </div>
-        </a>
-
-        <a href="./transactions.html" className="card-pathways">
-          <div>
-            <h3 className="card-heading">Transactions</h3>
-          </div>
-        </a>
-
-        <a href="" className="card-pathways">
-          <div>
-            <h3 className="card-heading">League Leaders</h3>
-          </div>
-        </a>
-      </div>
-      <div className="league-content" id="recent-transactions"></div>
-      <div className="league-content" id="trade-block"></div>
-    </>
+    <div className="directory-pages">
+      <DirectoryCard
+        link={"/standings-rankings"}
+        title={"Standings/Rankings"}
+        id={"standings-rankings-card"}
+      />
+      <DirectoryCard
+        link={"/schedules"}
+        title={"Schedules"}
+        id={"schedules-card"}
+      />
+      <DirectoryCard
+        link={"/transactions"}
+        title={"Transactions"}
+        id={"transactions-card"}
+      />
+      <DirectoryCard
+        link={"/league-leaders"}
+        title={"League Leaders"}
+        id={"league-leaders-card"}
+      />
+      <DirectoryCard
+        link={"/trade-block"}
+        title={"Trade Block"}
+        id={"trade-block-card"}
+      />
+    </div>
   );
 };
 
