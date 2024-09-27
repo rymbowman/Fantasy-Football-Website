@@ -44,7 +44,7 @@ const Standings = () => {
     fetchFantasyLeague();
   }, []);
   return (
-    <div className="leagueStandings">
+    <div className="standingsContainer">
       <h2>League Standings</h2>
       {teams.length === 0 ? (
         "Loading..."

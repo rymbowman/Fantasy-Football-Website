@@ -598,13 +598,14 @@
   height: 70vh;
 }
 
-.standings-container {
+.standingsContainer {
   width: 47.5%;
   background-color: navy;
   margin-top: 7.5px;
+  margin-left: 100px;
 }
 
-.standings-row {
+.standingsRow {
   height: 10%;
   border: 1px solid navy;
   background-color: powderblue;
