@@ -4,7 +4,7 @@ const LeagueInfo = () => {
   return (
     <div className="directory-pages">
       <DirectoryCard
-        link={"/standings-rankings"}
+        link={"/standings"}
         title={"Standings/Rankings"}
         id={"standings-rankings-card"}
       />

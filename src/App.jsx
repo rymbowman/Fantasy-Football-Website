@@ -10,6 +10,7 @@ import LeagueInfo from "./pages/LeagueInfo";
 import Members from "./pages/Members";
 import Resources from "./pages/Resources";
 import History from "./pages/History";
+import Standings from "./components/Standings";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route path="/members" element={<Members />} />
       <Route path="/history" element={<History />} />
       <Route path="/resources" element={<Resources />} />
+      <Route path="/standings" element={<Standings />} />
     </Route>
   )
 );

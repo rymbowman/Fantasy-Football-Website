@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "../App.css";
 
 const VerseOfDay = () => {
   const [verse, setVerse] = useState("");
@@ -24,7 +25,7 @@ const VerseOfDay = () => {
   }, []);
 
   return (
-    <div>
+    <div className="">
       <p id="verse-of-day">{verse}</p>
       <p id="verse-reference">{reference}</p>
     </div>

@@ -212,7 +212,6 @@
 }
 
 /*Homepage Styling*/
-
 .homepage {
   display: flex;
   flex-direction: column;
@@ -570,4 +569,49 @@
 
 .cardPathways:hover .card-heading {
   filter: brightness(150%);
+}
+
+.standings-rankings-titles {
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  text-decoration: underline;
+  padding-top: 15px;
+}
+
+#standings-title {
+  width: 30%;
+  text-align: center;
+  margin-left: 8.75%;
+}
+
+#pr-title {
+  width: 30%;
+  text-align: center;
+  margin-left: 22.5%;
+}
+
+.rankings-standings-container {
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  height: 70vh;
+}
+
+.standings-container {
+  width: 47.5%;
+  background-color: navy;
+  margin-top: 7.5px;
+}
+
+.standings-row {
+  height: 10%;
+  border: 1px solid navy;
+  background-color: powderblue;
+}
+
+#power-rankings-container {
+  width: 47.5%;
+  margin-top: 7.5px;
+  margin-left: 5%;
 }
