@@ -618,15 +618,33 @@
 
 .standingsContainer {
   width: 47.5%;
-  background-color: navy;
+  background-color: #071023;
   margin-top: 7.5px;
   margin-left: 100px;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .standingsRow {
-  height: 10%;
-  border: 1px solid navy;
-  background-color: powderblue;
+  height: 60px;
+  border: 1px solid #d9e2f7;
+  background-color: #071023;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.standingsRow:hover {
+  background-color: lightblue;
+  cursor: pointer;
 }
 
 #power-rankings-container {

@@ -11,6 +11,7 @@ import Members from "./pages/Members";
 import Resources from "./pages/Resources";
 import History from "./pages/History";
 import Standings from "./components/Standings";
+import "./constants/data/teamsData";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="/history" element={<History />} />
       <Route path="/resources" element={<Resources />} />
       <Route path="/standings" element={<Standings />} />
+      <Route path="/schedules" />
     </Route>
   )
 );
