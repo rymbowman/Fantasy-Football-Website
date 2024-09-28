@@ -467,8 +467,7 @@
   width: calc(100% - 80px);
 }
 
-.member-modal {
-  display: none;
+.memberModal {
   z-index: 1;
   left: auto;
   top: 5%;
