@@ -3,7 +3,7 @@ import "../App.css";
 const MemberModal = ({ member, onClose }) => {
   if (!member) return null;
   return (
-    <div key={member.id} className="memberModal" id={member.id}>
+    <div key={member.id} className="member-modal" id={member.id}>
       <div className="modal-content">
         <h3 className="modal-content-header">{member.name}</h3>
         <h4>{member.nickName}</h4>
