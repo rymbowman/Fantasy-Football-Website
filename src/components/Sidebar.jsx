@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import "../App.css";
+import SidebarIcon from "./SidebarIcon";
+import DropdownSidebarIcon from "./DropdownSidebarIcon";
 const Sidebar = () => {
   const [isActive, setIsActive] = useState(false);
 
@@ -24,102 +26,56 @@ const Sidebar = () => {
         />
       </div>
       <ul>
-        <li>
-          <Link to="/">
-            <i className="bx bxs-home-alt-2"></i>
-            <span className="nav-item">Home Page</span>
-          </Link>
-          <span className="tooltip">Home</span>
-        </li>
-        <li>
-          <Link to="./league" id="league-info-sidebar">
-            <i className="bx bxs-grid"></i>
-            <span className="nav-item">League Info</span>
-            <span>
-              <i
-                className="bx bx-chevron-down dropdown-arrow"
-                id="league-dropdown-arrow"
-              ></i>
-            </span>
-          </Link>
-
-          <ul className="dropdown" id="league-dropdown">
-            <li className="sidebar-dropdown-item">
-              <a href="#">Standings/Rankings</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">Schedules</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">Transactions</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">League Leaders</a>
-            </li>
-          </ul>
-          <span className="tooltip">League</span>
-        </li>
-        <li>
-          <Link to="./members">
-            <i className="bx bxs-user"></i>
-            <span className="nav-item">Members</span>
-          </Link>
-          <span className="tooltip">Members</span>
-        </li>
-        <li>
-          <Link to="./history">
-            <i className="bx bxs-book"></i>
-            <span className="nav-item">History</span>
-            <span>
-              <i
-                className="bx bx-chevron-down dropdown-arrow"
-                id="history-dropdown-arrow"
-              ></i>
-            </span>
-          </Link>
-          <ul className="dropdown" id="history-dropdown">
-            <li className="sidebar-dropdown-item">
-              <a href="#">Past Champions</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">League Punishments</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">Records</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">Draft Classes</a>
-            </li>
-          </ul>
-          <span className="tooltip">History</span>
-        </li>
-        <li>
-          <Link to="./resources">
-            <i className="bx bxs-ball"></i>
-            <span className="nav-item">Resources</span>
-            <span>
-              <i
-                className="bx bx-chevron-down dropdown-arrow"
-                id="resources-dropdown-arrow"
-              ></i>
-            </span>
-          </Link>
-          <ul className="dropdown" id="resources-dropdown">
-            <li className="sidebar-dropdown-item">
-              <a href="#">Trade Calculator</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">Dynasty Rankings</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">NFL News/Updates</a>
-            </li>
-            <li className="sidebar-dropdown-item">
-              <a href="#">Dynasty Podcasts</a>
-            </li>
-          </ul>
-          <span className="tooltip">Resources</span>
-        </li>
+        <SidebarIcon
+          link={"/"}
+          iconImage={"bx bxs-home-alt-2"}
+          page={"Home Page"}
+          tooltip={"Home"}
+        />
+        <DropdownSidebarIcon
+          link={"/league"}
+          iconImage={"bx bxs-grid"}
+          page={"League Info"}
+          dropdownItems={[
+            { link: "/standings", label: "Standings" },
+            { link: "/transactions", label: "Transactions" },
+            { link: "/schedules", label: "Schedules" },
+            { link: "/league-leaders", label: "League Leaders" },
+            { link: "/trade-block", label: "Trade Block" },
+          ]}
+          tooltip={"League"}
+        />
+        <SidebarIcon
+          link={"/members"}
+          iconImage={"bx bxs-user"}
+          page={"Members"}
+          tooltip={"Members"}
+        />
+        <DropdownSidebarIcon
+          link={"/history"}
+          iconImage={"bx bxs-book"}
+          page={"History"}
+          dropdownItems={[
+            { link: "/past-champions", label: "Past Champions" },
+            { link: "/league-punishments", label: "League Punishments" },
+            { link: "/records", label: "Records" },
+            { link: "/draft-classes", label: "Draft Classes" },
+            { link: "/league-leaders", label: "League Leaders" },
+          ]}
+          tooltip={"History"}
+        />
+        <DropdownSidebarIcon
+          link={"/resources"}
+          iconImage={"bx bxs-ball"}
+          page={"Resources"}
+          dropdownItems={[
+            { link: "/trade-calc", label: "Trade Calculator" },
+            { link: "/dynasty-rankings", label: "Dynasty Rankings" },
+            { link: "/nfl-news", label: "NFL News" },
+            { link: "/dynasty-podcasts", label: "Dynasty Podcasts" },
+          ]}
+          tooltip={"Resources"}
+        />
       </ul>
     </div>
   );
