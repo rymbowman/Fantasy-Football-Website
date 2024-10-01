@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*Sidebar Styling*/
 * {
   margin: 0;
@@ -378,58 +381,70 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
-  background-color: #222;
+  background: linear-gradient(135deg, #222, #3a3a3a);
   height: 250px;
-  color: white;
-}
-
-.members-h1 {
-  padding: 5px;
-  border-bottom: 1px solid lightblue;
-}
-
-.members-p {
-  padding-top: 5px;
-  font-style: italic;
 }
 
 .members-h2 {
-  text-align: center;
   font-size: 36px;
-  font-family: "Times New Roman", Times, serif;
-  color: #071023;
+  font-family: "Baskervville SC", serif;
+  letter-spacing: 1px;
+  color: white;
 }
 
 .league-members-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   padding-bottom: 50px;
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 50px;
 }
 
-.memberCard {
-  width: 400px;
-  height: 500px;
+.member-card {
+  width: 100%;
+  max-width: 400px;
+
+  height: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   color: #071023;
+  padding: 20px;
+  font-family: "Baskervville SC", serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
 }
 
-.memberImg {
-  width: 300px;
-  height: 350px;
+.member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #f0f0f0;
+}
+
+.member-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   margin: 10px auto;
-  border: 2px solid #071023;
+  border: none;
   border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.member-img:hover {
+  transform: scale(1.03);
 }
 
 .card-title {
   font-size: 22px;
-  padding-bottom: 10px;
-  text-decoration: underline;
+  padding-bottom: 5px;
+  font-weight: 500;
 }
 
 .button-members {
@@ -441,7 +456,7 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 18px;
   font-weight: bold;
-  background-color: lightblue;
+  background-color: #1e90ff;
   color: #071023;
   cursor: pointer;
   border-radius: 5px;
