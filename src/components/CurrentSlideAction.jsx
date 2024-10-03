@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import slidesData from "../constants/data/slidesData";
 import HomepageImgCarousel from "./HomepageImgCarousel";
 import "../App.css";
@@ -19,29 +19,27 @@ const CurrentSlideAction = () => {
   const currentSlide = (n) => {
     setSlideIndex(n);
   };
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      plusSlides(1); // Automatically go to the next slide
+    }, 15000); // 15000 milliseconds = 15 seconds
+
+    // Cleanup function to clear the interval
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [slideIndex]);
 
   return (
     <>
-      <HomepageImgCarousel slideIndex={slideIndex} />
-
-      {/* Controls */}
-      <button
-        onClick={() => plusSlides(-1)}
-        id="prev-btn"
-        className="carousel-btn"
-      >
-        Prev
-      </button>
-      <button
-        onClick={() => plusSlides(1)}
-        id="next-btn"
-        className="carousel-btn"
-      >
-        Next
-      </button>
+      <HomepageImgCarousel
+        slideIndex={slideIndex}
+        plusSlides={plusSlides}
+        currentSlide={currentSlide}
+      />
 
       {/* Dots */}
-      <div className="dot">
+      <div className="dots-container">
         {slidesData.map((_, i) => (
           <span
             key={i}

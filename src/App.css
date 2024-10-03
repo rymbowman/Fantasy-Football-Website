@@ -290,6 +290,8 @@
   width: 800px;
   height: 500px;
   border: 3px solid black;
+  position: relative;
+  overflow: hidden;
 }
 
 .slide {
@@ -318,6 +320,7 @@
   font-weight: bold;
   font-size: 26px;
   transition: 0.6s ease;
+  z-index: 1;
 }
 
 /* Position the "next button" to the right */
@@ -348,6 +351,12 @@
 }
 
 /* The dots/bullets/indicators */
+.dots-container {
+  display: flex;
+  margin: 10px 0;
+  justify-content: center;
+}
+
 .dot {
   cursor: pointer;
   height: 15px;
@@ -359,6 +368,9 @@
   transition: background-color 0.6s ease;
 }
 
+.dot.active {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 .dot:hover {
   background-color: #717171;
 }

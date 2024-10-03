@@ -1,7 +1,7 @@
 import slidesData from "../constants/data/slidesData";
+
 import "../App.css";
-import CurrentSlideAction from "./CurrentSlideAction";
-const HomepageImgCarousel = ({ slideIndex }) => {
+const HomepageImgCarousel = ({ slideIndex, plusSlides }) => {
   return (
     <div className="slideshow-carousel">
       {slidesData.map((slide, index) => (
@@ -14,6 +14,21 @@ const HomepageImgCarousel = ({ slideIndex }) => {
           <div className="text">{slide.caption}</div>
         </div>
       ))}
+      {/* Controls */}
+      <button
+        id="prev-btn"
+        className="carousel-btn"
+        onClick={() => plusSlides(-1)}
+      >
+        Prev
+      </button>
+      <button
+        id="next-btn"
+        className="carousel-btn"
+        onClick={() => plusSlides(1)}
+      >
+        Next
+      </button>
     </div>
   );
 };
