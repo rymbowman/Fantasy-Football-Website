@@ -2,7 +2,7 @@ const headlinesImgsData = [
   {
     id: 1,
     src: "https://images.unsplash.com/photo-1719937050814-72892488f741?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    caption: "",
+    caption: "This is a cutom caption",
   },
   {
     id: 2,

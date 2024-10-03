@@ -20,14 +20,14 @@ const HomepageImgCarousel = ({ slideIndex, plusSlides }) => {
         className="carousel-btn"
         onClick={() => plusSlides(-1)}
       >
-        Prev
+        &#10094;
       </button>
       <button
         id="next-btn"
         className="carousel-btn"
         onClick={() => plusSlides(1)}
       >
-        Next
+        &#10095;
       </button>
     </div>
   );
