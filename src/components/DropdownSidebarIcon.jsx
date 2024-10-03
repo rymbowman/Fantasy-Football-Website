@@ -1,5 +1,6 @@
 import "../App.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const DropdownSidebarIcon = ({
   link,
   iconImage,
@@ -7,21 +8,37 @@ const DropdownSidebarIcon = ({
   dropdownItems,
   tooltip,
 }) => {
+  const [isActive, setIsActive] = useState(false);
+  const [rotate, setRotate] = useState(false);
+  const toggleDropdown = (e) => {
+    e.preventDefault();
+    setIsActive(!isActive);
+    setRotate(!rotate);
+  };
+
   return (
     <>
       <li>
-        <Link to={link} id="league-info-sidebar">
-          <i className={iconImage}></i>
-          <span className="nav-item">{page}</span>
+        <div className="li-dropdown">
+          <Link to={link}>
+            <i className={iconImage}></i>
+            <span className="nav-item">{page}</span>
+          </Link>
           <span>
             <i
-              className="bx bx-chevron-down dropdown-arrow"
+              className={`bx bx-chevron-down dropdown-arrow ${
+                rotate ? "rotate" : ""
+              }`}
               id="league-dropdown-arrow"
+              onClick={toggleDropdown}
             ></i>
           </span>
-        </Link>
+        </div>
 
-        <ul className="dropdown" id="league-dropdown">
+        <ul
+          className={`dropdown ${isActive ? "active" : ""}`}
+          id="league-dropdown"
+        >
           {dropdownItems.map((item, index) => (
             <li className="sidebar-dropdown-item" key={index}>
               <Link to={item.link}>{item.label}</Link>
