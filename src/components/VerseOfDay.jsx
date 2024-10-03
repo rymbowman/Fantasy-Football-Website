@@ -25,10 +25,10 @@ const VerseOfDay = () => {
   }, []);
 
   return (
-    <div className="">
-      <p id="verse-of-day">{verse}</p>
-      <p id="verse-reference">{reference}</p>
-    </div>
+    <>
+      <h4 id="verse-of-day">{verse}</h4>
+      <h6 id="verse-reference">{reference}</h6>
+    </>
   );
 };
 

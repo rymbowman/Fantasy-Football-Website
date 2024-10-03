@@ -1,4 +1,5 @@
 import DirectoryCard from "../components/DirectoryCard";
+import "../App.css";
 const Resources = () => {
   return (
     <div className="directory-pages">

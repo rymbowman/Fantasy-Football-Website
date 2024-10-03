@@ -1,11 +1,12 @@
 import DirectoryCard from "../components/DirectoryCard";
+import "../App.css"
 const History = () => {
   return (
     <div className="directory-pages">
       <DirectoryCard
-        link={"/standings"}
-        title={"Standings/Rankings"}
-        id={"standings-rankings-card"}
+        link={"/past-punishments"}
+        title={"Past Punishments"}
+        id={"punishments-card"}
       />
       <DirectoryCard
         link={"/schedules"}

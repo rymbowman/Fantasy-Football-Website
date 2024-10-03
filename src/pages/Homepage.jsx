@@ -1,11 +1,14 @@
-import CurrentSlideAction from "../components/CurrentSlideAction";
 import HomepageHeader from "../components/HomepageHeader";
-
+import CurrentSlideAction from "../components/CurrentSlideAction";
+import "../App.css";
 const Homepage = () => {
   return (
     <div className="homepage">
       <HomepageHeader />;
-      <CurrentSlideAction />
+      <div className="homepage-main-content">
+        <h3 className="homepage-titles">Top Headlines</h3>
+        <CurrentSlideAction />
+      </div>
     </div>
   );
 };

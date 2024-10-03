@@ -1,6 +1,7 @@
 import { useState } from "react";
 import slidesData from "../constants/data/slidesData";
 import HomepageImgCarousel from "./HomepageImgCarousel";
+import "../App.css";
 const CurrentSlideAction = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 
@@ -24,11 +25,23 @@ const CurrentSlideAction = () => {
       <HomepageImgCarousel slideIndex={slideIndex} />
 
       {/* Controls */}
-      <button onClick={() => plusSlides(-1)}>Prev</button>
-      <button onClick={() => plusSlides(1)}>Next</button>
+      <button
+        onClick={() => plusSlides(-1)}
+        id="prev-btn"
+        className="carousel-btn"
+      >
+        Prev
+      </button>
+      <button
+        onClick={() => plusSlides(1)}
+        id="next-btn"
+        className="carousel-btn"
+      >
+        Next
+      </button>
 
       {/* Dots */}
-      <div className="dotContainer">
+      <div className="dot">
         {slidesData.map((_, i) => (
           <span
             key={i}

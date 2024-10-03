@@ -1,5 +1,5 @@
 import DirectoryCard from "../components/DirectoryCard";
-
+import "../App.css";
 const LeagueInfo = () => {
   return (
     <div className="directory-pages">
