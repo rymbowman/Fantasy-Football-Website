@@ -44,19 +44,19 @@ const Standings = () => {
     fetchFantasyLeague();
   }, []);
   return (
-    <div className="standingsContainer">
+    <div className="standings-container">
       <h2>League Standings</h2>
       {teams.length === 0 ? (
         "Loading..."
       ) : (
         <ul>
           {teams.map((team, index) => (
-            <div key={index} className="standingsRow">
-              <div className="standingsTeamNames">
+            <div key={index} className="standings-row">
+              <div className="standings-teamNames">
                 <h3>{team.teamName}</h3>
                 <p>@{team.owner}</p>
               </div>
-              <div className="standingsData">
+              <div className="standings-data">
                 <p>
                   {team.wins} {team.losses} {team.ties} {team.pointsFor}{" "}
                   {team.pointsAgainst}

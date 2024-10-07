@@ -13,6 +13,7 @@ import History from "./pages/History";
 import Standings from "./components/Standings";
 import "./constants/data/teamsData";
 import PastPunishments from "./pages/PastPunishments";
+import LeagueTransactions from "./components/LeagueTransactions";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
@@ -23,7 +24,7 @@ const router = createBrowserRouter(
       <Route path="/resources" element={<Resources />} />
       <Route path="/standings" element={<Standings />} />
       <Route path="/schedules" />
-      <Route path="/transactions" />
+      <Route path="/transactions" element={<LeagueTransactions />} />
       <Route path="/league-leaders" />
       <Route path="/trade-block" />
       <Route path="/past-punishments" element={<PastPunishments />} />

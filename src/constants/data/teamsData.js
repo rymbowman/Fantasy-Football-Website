@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const leagueId = "1048289149926760448";
-const leagueUsers = async () => {
+export const leagueId = "1048289149926760448";
+/*const leagueUsers = async () => {
   try {
     const getUsers = await axios.get(
       `https://api.sleeper.app/v1/league/${leagueId}/users`
@@ -27,4 +27,4 @@ const leagueRosters = async () => {
     console.log("error loading data", error);
   }
 };
-leagueRosters();
+leagueRosters();*/
