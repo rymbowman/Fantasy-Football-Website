@@ -28,7 +28,7 @@ const CurrentSlideAction = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, [slideIndex]);
+  });
 
   return (
     <>

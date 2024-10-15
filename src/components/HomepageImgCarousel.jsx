@@ -1,5 +1,5 @@
 import slidesData from "../constants/data/slidesData";
-
+import PropTypes from "prop-types";
 import "../App.css";
 const HomepageImgCarousel = ({ slideIndex, plusSlides }) => {
   return (
@@ -33,4 +33,8 @@ const HomepageImgCarousel = ({ slideIndex, plusSlides }) => {
   );
 };
 
+HomepageImgCarousel.propTypes = {
+  slideIndex: PropTypes.number.isRequired,
+  plusSlides: PropTypes.func.isRequired,
+};
 export default HomepageImgCarousel;

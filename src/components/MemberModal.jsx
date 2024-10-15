@@ -1,4 +1,5 @@
 import "../App.css";
+import PropTypes from "prop-types";
 
 const MemberModal = ({ member, onClose }) => {
   if (!member) return null;
@@ -25,5 +26,19 @@ const MemberModal = ({ member, onClose }) => {
     </div>
   );
 };
-
+MemberModal.propTypes = {
+  member: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    nickName: PropTypes.string,
+    bestPick: PropTypes.string,
+    worstPick: PropTypes.string,
+    bestTrade: PropTypes.string,
+    worstTrade: PropTypes.string,
+    bio: PropTypes.string,
+    mission: PropTypes.string,
+    allTimeRecord: PropTypes.string,
+  }),
+  onClose: PropTypes.func.isRequired,
+};
 export default MemberModal;

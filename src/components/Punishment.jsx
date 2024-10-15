@@ -1,5 +1,6 @@
 import punishmentsData from "../constants/data/punishmentsData";
 import "../App.css";
+
 const Punishment = () => {
   return (
     <>

@@ -1,6 +1,7 @@
 import "../App.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import PropTypes from "prop-types";
 const DropdownSidebarIcon = ({
   link,
   iconImage,
@@ -51,4 +52,11 @@ const DropdownSidebarIcon = ({
   );
 };
 
+DropdownSidebarIcon.propTypes = {
+  link: PropTypes.string.isRequired,
+  iconImage: PropTypes.string.isRequired,
+  page: PropTypes.string.isRequired,
+  dropdownItems: PropTypes.string,
+  tooltip: PropTypes.string.isRequired,
+};
 export default DropdownSidebarIcon;

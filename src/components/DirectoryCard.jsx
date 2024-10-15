@@ -1,5 +1,6 @@
 import "../App.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 const DirectoryCard = (props) => {
   return (
     <>
@@ -12,4 +13,9 @@ const DirectoryCard = (props) => {
   );
 };
 
+DirectoryCard.propTypes = {
+  link: PropTypes.string,
+  id: PropTypes.string,
+  title: PropTypes.string,
+};
 export default DirectoryCard;

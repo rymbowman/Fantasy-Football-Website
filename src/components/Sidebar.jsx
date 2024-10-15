@@ -18,11 +18,7 @@ const Sidebar = () => {
         <i className="bx bx-menu" id="btn" onClick={toggleSidebar}></i>
       </div>
       <div className="league-img">
-        <img
-          src="./images/Liberty_Flames_logo.svg copy.png"
-          alt="A logo of Liberty University"
-          className="league-img"
-        />
+        <img src="" alt="A logo of Liberty University" className="league-img" />
       </div>
       <ul>
         <SidebarIcon

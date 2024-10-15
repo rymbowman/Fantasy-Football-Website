@@ -581,7 +581,7 @@
 }
 
 #standings-rankings-card {
-  background-image: url(/Images/standings-background-img.png);
+  background-image: url(../src/assets/images/standings-background-img.png);
 }
 
 #standings-rankings-card:hover {
@@ -707,4 +707,14 @@
   height: 60px;
   border-radius: 50%;
   border: 1px solid white;
+}
+
+.league-matchups {
+  margin-left: 150px;
+  background-color: grey;
+}
+
+.owner-info {
+  background-color: grey;
+  margin-left: 100px;
 }

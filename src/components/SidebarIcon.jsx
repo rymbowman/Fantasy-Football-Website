@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../App.css";
-
+import PropTypes from "prop-types";
 const SidebarIcon = ({ link, iconImage, page, tooltip }) => {
   return (
     <>
@@ -14,5 +14,10 @@ const SidebarIcon = ({ link, iconImage, page, tooltip }) => {
     </>
   );
 };
-
+SidebarIcon.propTypes = {
+  link: PropTypes.string.isRequired,
+  iconImage: PropTypes.string.isRequired,
+  page: PropTypes.string.isRequired,
+  tooltip: PropTypes.string.isRequired,
+};
 export default SidebarIcon;

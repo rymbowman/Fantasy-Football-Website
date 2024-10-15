@@ -1,6 +1,5 @@
 import axios from "axios";
 
-export const leagueId = "1048289149926760448";
 /*const leagueUsers = async () => {
   try {
     const getUsers = await axios.get(
