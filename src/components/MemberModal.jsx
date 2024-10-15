@@ -1,4 +1,4 @@
-import "../styles/App.css";
+import "../styles/MembersPage.css";
 import PropTypes from "prop-types";
 
 const MemberModal = ({ member, onClose }) => {

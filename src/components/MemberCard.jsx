@@ -1,4 +1,4 @@
-import "../styles/App.css";
+import "../styles/MembersPage.css";
 import memberData from "../constants/data/memberData";
 import MemberModal from "./MemberModal";
 import { useState } from "react";
