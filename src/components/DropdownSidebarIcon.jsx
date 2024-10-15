@@ -1,4 +1,5 @@
-import "../App.css";
+import "../styles/App.css";
+import "../styles/Sidebar.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import PropTypes from "prop-types";

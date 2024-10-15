@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import slidesData from "../constants/data/slidesData";
 import HomepageImgCarousel from "./HomepageImgCarousel";
-import "../App.css";
+import "../styles/App.css";
 const CurrentSlideAction = () => {
   const [slideIndex, setSlideIndex] = useState(1);
 

@@ -1,5 +1,5 @@
 import punishmentsData from "../constants/data/punishmentsData";
-import "../App.css";
+import "../styles/App.css";
 
 const Punishment = () => {
   return (

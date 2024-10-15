@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import "../App.css";
+import "../styles/Sidebar.css";
+import "../styles/App.css";
 import PropTypes from "prop-types";
 const SidebarIcon = ({ link, iconImage, page, tooltip }) => {
   return (

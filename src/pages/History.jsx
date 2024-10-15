@@ -1,5 +1,5 @@
 import DirectoryCard from "../components/DirectoryCard";
-import "../App.css"
+import "../styles/App.css"
 const History = () => {
   return (
     <div className="directory-pages">
