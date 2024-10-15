@@ -1,27 +1,28 @@
 import DirectoryCard from "../components/DirectoryCard";
-import "../styles/App.css";
+import ExternalLinkCard from "../components/ExternalLinkCard";
+import "../styles/LeagueSplashPages.css";
 const Resources = () => {
   return (
     <div className="directory-pages">
-      <DirectoryCard
-        link={"/standings"}
-        title={"Standings/Rankings"}
-        id={"standings-rankings-card"}
+      <ExternalLinkCard
+        link={"https://www.fantasypros.com/nfl/rankings/dynasty-overall.php"}
+        title={"Dynasty Rankings"}
+        id={"dynasty-rankings-card"}
       />
       <DirectoryCard
         link={"/schedules"}
-        title={"Schedules"}
-        id={"schedules-card"}
+        title={"Podcasts"}
+        id={"podcasts-card"}
       />
-      <DirectoryCard
+      <ExternalLinkCard
         link={"/transactions"}
-        title={"Transactions"}
-        id={"transactions-card"}
+        title={"Trade Calculator"}
+        id={"trade-calc-card"}
       />
-      <DirectoryCard
+      <ExternalLinkCard
         link={"/league-leaders"}
-        title={"League Leaders"}
-        id={"league-leaders-card"}
+        title={"NFL News"}
+        id={"nfl-news-card"}
       />
       <DirectoryCard
         link={"/trade-block"}

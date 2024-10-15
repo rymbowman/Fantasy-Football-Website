@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const DirectoryCard = (props) => {
   return (
     <>
-      <Link to={props.link} className="cardPathways" id={props.id}>
+      <Link to={props.link} className="card-pathways" id={props.id}>
         <div>
           <h3 className="card-heading">{props.title}</h3>
         </div>

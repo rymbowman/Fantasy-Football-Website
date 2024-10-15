@@ -9,7 +9,7 @@
   background-color: whitesmoke;
 }
 
-.cardPathways {
+.card-pathways {
   display: flex;
   border-radius: 10px;
   align-items: center;
@@ -31,13 +31,14 @@
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 5px;
   padding: 5px;
+  text-align: center;
 }
 
-.cardPathways:hover {
+.card-pathways:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(https://images.unsplash.com/photo-1723771106486-eb5fceb082a9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
 }
 
-.cardPathways:hover .card-heading {
+.card-pathways:hover .card-heading {
   filter: brightness(150%);
 }
