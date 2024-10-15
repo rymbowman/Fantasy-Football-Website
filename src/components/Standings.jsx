@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import "../styles/App.css";
+import "../styles/LeaguePage.css";
 const Standings = () => {
   const leagueId = "1048289149926760448";
   const [teams, setTeams] = useState([]);
