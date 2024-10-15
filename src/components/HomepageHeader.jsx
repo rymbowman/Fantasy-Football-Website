@@ -1,5 +1,5 @@
 import VerseOfDay from "./VerseOfDay";
-import "../styles/App.css";
+import "../styles/Homepage.css";
 const HomepageHeader = () => {
   return (
     <div className="homepage-header">

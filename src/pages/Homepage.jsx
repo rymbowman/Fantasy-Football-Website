@@ -1,6 +1,6 @@
 import HomepageHeader from "../components/HomepageHeader";
 import CurrentSlideAction from "../components/CurrentSlideAction";
-import "../styles/App.css";
+import "../styles/Homepage.css";
 const Homepage = () => {
   return (
     <div className="homepage">

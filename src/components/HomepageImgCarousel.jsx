@@ -1,6 +1,6 @@
 import slidesData from "../constants/data/slidesData";
 import PropTypes from "prop-types";
-import "../styles/App.css";
+import "../styles/Homepage.css";
 const HomepageImgCarousel = ({ slideIndex, plusSlides }) => {
   return (
     <div className="slideshow-carousel">

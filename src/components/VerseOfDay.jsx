@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "../styles/App.css";
+import "../styles/Homepage.css"
 
 const VerseOfDay = () => {
   const [verse, setVerse] = useState("");
