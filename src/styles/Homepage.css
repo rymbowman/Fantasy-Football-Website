@@ -4,6 +4,7 @@
   flex-direction: column;
   margin-left: 80px;
   align-items: center;
+  background-color: whitesmoke;
 }
 
 .main-content h1 {

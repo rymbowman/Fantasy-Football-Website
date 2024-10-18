@@ -1,4 +1,15 @@
 /*Members Page*/
+.members-main-content {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  top: 0;
+  margin-left: 80px;
+  transition: all 0.5s ease;
+  width: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
 .members-leading-container {
   display: flex;
   flex-direction: column;
@@ -6,23 +17,26 @@
   align-items: center;
   margin-bottom: 25px;
   background: linear-gradient(135deg, #222, #3a3a3a);
-  height: 250px;
+  height: 200px;
 }
 
-.members-h2 {
-  font-size: 36px;
+.members-h1 {
+  font-size: 54px;
   font-family: "Baskervville SC", serif;
   letter-spacing: 1px;
-  color: white;
+  color: #d9e2f7;
+  border-bottom: 5px solid red;
 }
 
 .league-members-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-bottom: 50px;
   gap: 30px;
   padding: 0 20px;
   margin-top: 50px;
+  border: 3px solid black;
 }
 
 .member-card {
@@ -32,7 +46,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
   color: #071023;
   padding: 20px;
@@ -90,19 +103,9 @@
   filter: brightness(110%);
 }
 
-.sidebar.active ~ .members-page {
-  left: 250px;
+.sidebar.active ~ .members-main-content {
+  margin-left: 250px;
   width: calc(100% - 250px);
-}
-
-.main-content {
-  position: relative;
-  background-color: whitesmoke;
-  min-height: 100vh;
-  top: 0;
-  left: 80px;
-  transition: all 0.5s ease;
-  width: calc(100% - 80px);
 }
 
 @keyframes fadeIn {
@@ -116,36 +119,38 @@
   }
 }
 .member-modal {
-  z-index: 1000;
   display: flex;
-  top: 2.5%;
-  left: auto;
-  overflow: auto;
+  flex-direction: column;
   position: fixed;
+  top: 10%;
+  bottom: 10%;
+  margin: auto;
   width: 60%;
-  max-width: 800px;
   height: auto;
+  max-width: 800px;
   background: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
-  text-align: center;
+  gap: 15px;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-  padding: 40px 20px;
+  padding: 20px 20px;
   animation: fadeIn 0.5s ease-in-out;
 }
 
+.draft-picks {
+  display: flex;
+  gap: 10px;
+}
 .modal-content {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow: auto;
-  padding: 20px;
-  max-height: 80vh;
+  padding: 10px 20px;
+  max-height: 70vh;
   color: #d9e2f7;
-  border: 2.5px solid #d9e2f7;
-  border-radius: 12px;
 }
 
 .modal-content-header {
@@ -157,6 +162,19 @@
   font-weight: bold;
 }
 
+.modal-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal-header {
+  border-bottom: 1px solid red;
+  color: #d9e2f7;
+  margin-top: 5px;
+}
+
 .modal-content-text {
   font-size: 16px;
   margin-bottom: 20px;
@@ -164,6 +182,38 @@
   text-align: center;
   padding: 0 15px;
   font-family: "Baskervville SC", serif;
+}
+
+.modal-list {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.modal-li {
+  list-style: none;
+  text-align: center;
+  font-family: "Baskervville SC", serif;
+}
+
+.modal-li-p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 15px;
+  font-family: "Baskervville SC", serif;
+}
+
+.modal-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  text-align: center;
+  font-family: "Baskervville SC", serif;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .modal-close-button {
@@ -177,6 +227,7 @@
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   letter-spacing: 1px;
+  width: 25%;
 }
 
 .modal-close-button:hover {

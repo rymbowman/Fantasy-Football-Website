@@ -14,6 +14,7 @@ import Standings from "./components/Standings";
 import "./constants/data/teamsData";
 import PastPunishments from "./pages/PastPunishments";
 import LeagueTransactions from "./components/LeagueTransactions";
+import Podcasts from "./pages/Podcasts";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path="/past-champions" />
       <Route path="/draft-results" />
       <Route path="/records" />
+      <Route path="/podcasts" element={<Podcasts />} />
     </Route>
   )
 );

@@ -57,7 +57,7 @@ DropdownSidebarIcon.propTypes = {
   link: PropTypes.string.isRequired,
   iconImage: PropTypes.string.isRequired,
   page: PropTypes.string.isRequired,
-  dropdownItems: PropTypes.string,
+  dropdownItems: PropTypes.array,
   tooltip: PropTypes.string.isRequired,
 };
 export default DropdownSidebarIcon;

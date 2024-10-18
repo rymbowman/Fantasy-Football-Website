@@ -3,26 +3,67 @@ import PropTypes from "prop-types";
 
 const MemberModal = ({ member, onClose }) => {
   if (!member) return null;
+
   return (
     <div key={member.id} className="member-modal" id={member.id}>
       <div className="modal-content">
-        <h3 className="modal-content-header">{member.name}</h3>
-        <h4>{member.nickName}</h4>
-        <div className="modal-content-text">{member.bestPick}</div>
-        <div className="modal-content-text">{member.worstPick}</div>
-        <div className="modal-content-text">{member.bestTrade}</div>
-        <div className="modal-content-text">{member.worstTrade}</div>
-        <div className="modal-content-text">{member.bio}</div>
-        <div className="modal-content-text">{member.mission}</div>
-        <div className="modal-content-text">{member.allTimeRecord}</div>
-        <button
-          className="modal-close-button"
-          id={"Ryan-close"}
-          onClick={onClose}
-        >
-          Close
-        </button>
+        <div className="modal-div">
+          <h2 className="modal-content-header">{member.name}</h2>
+        </div>
+        <div className="modal-div">
+          <h3 className="modal-header">All Time Record</h3>
+          <p className="modal-content-text">{member.allTimeRecord}</p>
+        </div>
+
+        <div className="modal-div">
+          <h3 className="modal-header">Best Draft Pick</h3>
+          <p className="modal-content-text">{member.bestPick}</p>
+        </div>
+        <div className="modal-div">
+          <h3 className="modal-header">Worst Draft Pick</h3>
+          <p className="modal-content-text">{member.worstPick}</p>
+        </div>
+
+        <div className="modal-div">
+          <h3 className="modal-header">Best Trade</h3>
+          <div className="modal-list">
+            <p className="modal-li-p">{member.bestTrade[2]}</p>
+            <li className="modal-li">Acquired: {member.bestTrade[0]}</li>
+            <li className="modal-li">For: {member.bestTrade[1]}</li>
+          </div>
+
+          <div className="modal-div">
+            <h3 className="modal-header">Worst Trade</h3>
+            <div className="modal-list">
+              <p className="modal-li-p">{member.worstTrade[2]}</p>
+              <li className="modal-li">Traded away: {member.worstTrade[0]}</li>
+              <li className="modal-li">Acquired: {member.worstTrade[1]}</li>
+            </div>
+          </div>
+        </div>
+
+        <div className="modal-div">
+          <h3 className="modal-header">Bio</h3>
+          <div className="modal-section">
+            <p className="modal-p">{member.bio[0]}</p>
+            <p className="modal-p">{member.bio[1]}</p>
+          </div>
+        </div>
+        <div className="modal-div">
+          <h3 className="modal-header">Mission</h3>
+          <div className="modal-section">
+            <p className="modal-p">{member.mission[0]}</p>
+            <p className="modal-p">{member.mission[1]}</p>
+          </div>
+        </div>
       </div>
+      <button
+        className="modal-close-button"
+        id={"Ryan-close"}
+        onClick={onClose}
+      >
+        Close
+      </button>
     </div>
   );
 };
