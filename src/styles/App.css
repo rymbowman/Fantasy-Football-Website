@@ -6,27 +6,92 @@
 }
 
 /* League Splash Pages*/
+.tran-table {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid yellow;
+  width: 100%;
+}
 
 .transactions-row {
   height: auto;
-  border: 1px solid #d9e2f7;
+  width: 100%;
   background-color: #071023;
-  margin: 5px 0;
+  color: white;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
+
+.tran-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.added-div {
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  gap: 15px;
+  width: 100%;
+}
+.dropped-div {
+  display: flex;
+  align-items: center;
+  margin-left: 35%;
+  gap: 15px;
+  width: 100%;
+}
+
+.player-text {
+  color: white;
+  border: 1px solid white;
+  width: 70%;
+}
+.waiver-bid {
+  color: white;
+  width: 10%;
+}
+.picks-involved {
+  width: 12.5%;
+}
+
+.tran-type {
+  width: 10%;
+}
+
+.tran-week {
+  width: 10%;
+}
+
+.tran-user {
+  width: 15%;
+}
+
+.tran-added {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.tran-dropped {
+  width: 20%;
+}
+
 .transactions-text {
   color: white;
   width: 20%;
 }
-.player-img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
+
+.player-image {
+  width: 17.5%;
+  height: 50px;
+  border-radius: 10%;
   border: 1px solid white;
 }
 
