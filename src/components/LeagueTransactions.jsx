@@ -84,7 +84,7 @@ const LeagueTransactions = () => {
     <>
       <h2>League Transactions</h2>
       <div className="tran-table">
-        <div className="transactions-row">
+        <div className="transactions-row transactions-header">
           <div className="tran-type tran-item">Type</div>
           <div className="tran-week tran-item">Week</div>
           <div className="tran-user tran-item">User</div>
@@ -97,8 +97,6 @@ const LeagueTransactions = () => {
             const droppedPlayerId = tran.drops ? Object.keys(tran.drops) : [];
             const transactionDate = new Date(tran.status_updated);
             const formattedDate = transactionDate.toLocaleString("en-us", {
-              weekday: "long",
-              year: "numeric",
               month: "long",
               day: "numeric",
               hour: "numeric",
@@ -110,6 +108,7 @@ const LeagueTransactions = () => {
                 <div className="tran-type tran-item">{tran.type}</div>{" "}
                 <div className="tran-week tran-item">{formattedDate}</div>{" "}
                 <div className="tran-user tran-item">
+                  @
                   {tran.roster_ids
                     .map((id) => teams[id] || `Roster ID ${id}`)
                     .join(", ")}{" "}
@@ -151,9 +150,14 @@ const LeagueTransactions = () => {
                               src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
                               className="player-image"
                             />
-                            {players[id]
-                              ? players[id].full_name
-                              : `Player id: ${id}`}{" "}
+                            {players[id] ? (
+                              <>
+                                {players[id].full_name} - {players[id].position}{" "}
+                                {players[id].team}
+                              </>
+                            ) : (
+                              `Player id: ${id}`
+                            )}{" "}
                           </span>
                         ))}
                       </div>
@@ -172,12 +176,15 @@ const LeagueTransactions = () => {
           }
         })}
         {displayedCount < transactions.length && (
-          <button onClick={loadMoreTransactions}>Load More</button>
+          <button
+            onClick={loadMoreTransactions}
+            className="transactions-button"
+          >
+            Load More
+          </button>
         )}
       </div>
     </>
   );
 };
 export default LeagueTransactions;
-
-//${`https://sleepercdn.com/avatars/${players[id]}.jpg`}
