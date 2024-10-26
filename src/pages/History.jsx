@@ -8,18 +8,14 @@ const History = () => {
         title={"Past Punishments"}
         id={"punishments-card"}
       />
+      <DirectoryCard link={"/"} title={"Champions"} id={"champs-card"} />
       <DirectoryCard
-        link={"/past-champions"}
-        title={"Champions"}
-        id={"champs-card"}
-      />
-      <DirectoryCard
-        link={"/previous-drafts"}
+        link={"/draft-results"}
         title={"Draft Results"}
         id={"drafts-card"}
       />
       <DirectoryCard
-        link={"/all-time-records"}
+        link={"/"}
         title={"All-Time Records"}
         id={"records-card"}
       />

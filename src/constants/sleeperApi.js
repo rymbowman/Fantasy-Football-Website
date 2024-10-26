@@ -46,3 +46,11 @@ export const fetchCurrentWeek = async () => {
   const currentWeek = currentLeagueState.week;
   return currentWeek;
 };
+
+export const fetchLeagueDrafts = async () => {
+  const resultsData = await axios.get(
+    `https://api.sleeper.app/v1/league/${leagueId}/drafts`
+  );
+  const leagueDrafts = resultsData.data;
+  console.log(leagueDrafts);
+};
