@@ -22,10 +22,10 @@ const LeagueTransactions = () => {
     let allTransactions = [];
     allWeekTransactions.forEach((week) => {
       let weekTransactions = week.data;
-      allTransactions = [
-        ...allTransactions,
-        ...Object.values(weekTransactions),
-      ];
+      const successfulTransactions = Object.values(weekTransactions).filter(
+        (tran) => tran.status === "complete"
+      );
+      allTransactions = [...allTransactions, ...successfulTransactions];
     });
 
     const sortedTransactions = allTransactions.sort((a, b) => {
