@@ -1,5 +1,5 @@
 import DirectoryCard from "../components/DirectoryCard";
-import "../styles/App.css"
+import "../styles/App.css";
 const History = () => {
   return (
     <div className="directory-pages">
@@ -9,24 +9,19 @@ const History = () => {
         id={"punishments-card"}
       />
       <DirectoryCard
-        link={"/schedules"}
-        title={"Schedules"}
-        id={"schedules-card"}
+        link={"/past-champions"}
+        title={"Champions"}
+        id={"champs-card"}
       />
       <DirectoryCard
-        link={"/transactions"}
-        title={"Transactions"}
-        id={"transactions-card"}
+        link={"/previous-drafts"}
+        title={"Draft Results"}
+        id={"drafts-card"}
       />
       <DirectoryCard
-        link={"/league-leaders"}
-        title={"League Leaders"}
-        id={"league-leaders-card"}
-      />
-      <DirectoryCard
-        link={"/trade-block"}
-        title={"Trade Block"}
-        id={"trade-block-card"}
+        link={"/all-time-records"}
+        title={"All-Time Records"}
+        id={"records-card"}
       />
     </div>
   );

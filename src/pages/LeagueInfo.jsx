@@ -23,11 +23,6 @@ const LeagueInfo = () => {
         title={"League Leaders"}
         id={"league-leaders-card"}
       />
-      <DirectoryCard
-        link={"/trade-block"}
-        title={"Trade Block"}
-        id={"trade-block-card"}
-      />
     </div>
   );
 };
