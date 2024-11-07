@@ -5,6 +5,11 @@
   align-items: center;
   padding-bottom: 50px;
   background-color: whitesmoke;
+  transition: all 0.5s ease;
+}
+
+.sidebar.active ~ .schedules-container {
+  margin-left: 250px;
 }
 
 .schedules-header-div {
