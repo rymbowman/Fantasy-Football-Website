@@ -86,7 +86,7 @@ const LeagueTransactions = () => {
       <div className="tran-table">
         <div className="transactions-row transactions-header">
           <div className="tran-type tran-item">Type</div>
-          <div className="tran-week tran-item">Week</div>
+          <div className="tran-week tran-item">Date</div>
           <div className="tran-user tran-item">User</div>
           <div className="tran-added tran-item">Added</div>
           <div className="tran-dropped tran-item">Dropped</div>
