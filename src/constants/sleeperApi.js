@@ -52,5 +52,5 @@ export const fetchLeagueDrafts = async () => {
     `https://api.sleeper.app/v1/league/${leagueId}/drafts`
   );
   const leagueDrafts = resultsData.data;
-  console.log(leagueDrafts);
+  return leagueDrafts
 };

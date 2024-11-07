@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { fetchMatchups, fetchTeams, fetchCurrentWeek } from "./sleeperApi";
+import {
+  fetchMatchups,
+  fetchTeams,
+  fetchCurrentWeek,
+  fetchLeagueDrafts,
+} from "./sleeperApi";
 
 export const useFetchMatchups = (totalWeeks) => {
   const [schedule, setSchedule] = useState({});
@@ -23,4 +28,12 @@ export const useFetchCurrentWeek = () => {
     fetchCurrentWeek().then(setCurrentWeek).catch(console.error);
   }, []);
   return currentWeek;
+};
+
+export const useFetchDrafts = () => {
+  const [drafts, setDrafts] = useState({});
+  useEffect(() => {
+    fetchLeagueDrafts().then(setDrafts).catch(console.error);
+  }, []);
+  return drafts;
 };
