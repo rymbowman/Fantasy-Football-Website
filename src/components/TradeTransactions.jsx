@@ -139,19 +139,23 @@ const TradeTransactions = () => {
 
             return (
               <div key={index} className="transactions-row">
-                <div className="tran-item">{tran.type}</div>
-                <div>{formattedDate}</div>
-                <div>
-                  {/* Display team names */}
-                  {teams[tran.roster_ids[0]]} | {teams[tran.roster_ids[1]]}
+                <div className="tran-week tran-item">
+                  <p>{formattedDate}</p>
+                </div>
+                <div className="trade-users">
+                  <p className="trading-team">Users Involved</p>
+                  <p>{teams[tran.roster_ids[0]]}</p>
+                  <p>{teams[tran.roster_ids[1]]}</p>
                 </div>
 
                 {/* Display Team 1 (roster_id[0]) acquires */}
                 <div className="team-sends">
-                  <p>{teams[tran.roster_ids[0]]} Acquires:</p>
+                  <p className="tran-item trading-team">
+                    {teams[tran.roster_ids[0]]} Acquires:
+                  </p>
                   {team1Assets.addedPlayers.length > 0 &&
                     team1Assets.addedPlayers.map((id) => (
-                      <span key={id}>
+                      <span key={id} className="traded-player">
                         <img
                           src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
                           className="player-image"
@@ -165,7 +169,7 @@ const TradeTransactions = () => {
                     ))}
                   {team1Assets.draftPicks.length > 0 &&
                     team1Assets.draftPicks.map((pick, index) => (
-                      <p key={index}>
+                      <p key={index} className="tran-item">
                         {`Round ${pick.round} - ${pick.season}`}
                       </p>
                     ))}
@@ -173,10 +177,12 @@ const TradeTransactions = () => {
 
                 {/* Display Team 2 (roster_id[1]) acquires */}
                 <div className="team-sends">
-                  <p>{teams[tran.roster_ids[1]]} Acquires:</p>
+                  <p className="tran-item trading-team">
+                    {teams[tran.roster_ids[1]]} Acquires:
+                  </p>
                   {team2Assets.addedPlayers.length > 0 &&
                     team2Assets.addedPlayers.map((id) => (
-                      <span key={id}>
+                      <span key={id} className="traded-player">
                         <img
                           src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
                           className="player-image"
@@ -190,7 +196,7 @@ const TradeTransactions = () => {
                     ))}
                   {team2Assets.draftPicks.length > 0 &&
                     team2Assets.draftPicks.map((pick, index) => (
-                      <p key={index}>
+                      <p key={index} className="tran-item">
                         {`Round ${pick.round} - ${pick.season}`}
                       </p>
                     ))}
