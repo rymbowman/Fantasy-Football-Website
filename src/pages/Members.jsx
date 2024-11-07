@@ -1,11 +1,12 @@
-import MemberCard from "../components/MemberCard";
+import MemberCard from "../components/memberItems/MemberCard";
+import "../components/memberItems/MemberItems.css";
+import PageHeader from "../components/pageHeaders/PageHeader";
 import "../styles/MembersPage.css";
+
 const Members = () => {
   return (
     <div className="members-main-content">
-      <div className="members-leading-container">
-        <h1 className="members-h1">Meet Our Members</h1>
-      </div>
+      <PageHeader category={"members"} pageTitle={"Our Members"} />
 
       <div className="league-members-container">
         <MemberCard />

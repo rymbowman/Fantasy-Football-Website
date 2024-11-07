@@ -1,5 +1,5 @@
-import DirectoryCard from "../components/DirectoryCard";
-import ExternalLinkCard from "../components/ExternalLinkCard";
+import DirectoryCard from "../components/directoryCards/DirectoryCard";
+import ExternalLinkCard from "../components/directoryCards/ExternalLinkCard";
 import "../styles/LeagueSplashPages.css";
 
 const Resources = () => {
@@ -19,11 +19,6 @@ const Resources = () => {
         link={"/transactions"}
         title={"Trade Calculator"}
         id={"trade-calc-card"}
-      />
-      <ExternalLinkCard
-        link={"/league-leaders"}
-        title={"NFL News"}
-        id={"nfl-news-card"}
       />
     </div>
   );

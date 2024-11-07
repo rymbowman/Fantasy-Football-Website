@@ -1,5 +1,5 @@
-import HomepageHeader from "../components/HomepageHeader";
-import CurrentSlideAction from "../components/CurrentSlideAction";
+import HomepageHeader from "../components/homepageHeader/HomepageHeader";
+import CurrentSlideAction from "../components/imageCarousel/CurrentSlideAction";
 import "../styles/Homepage.css";
 const Homepage = () => {
   return (
