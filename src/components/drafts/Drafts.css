@@ -1,0 +1,132 @@
+.drafts-container {
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.draft-season-section {
+  border-bottom: 1px solid black;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.draft-li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.draft-header-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #222, #3a3a3a);
+  height: 200px;
+  width: 100%;
+}
+
+.drafts-h1 {
+  font-size: 54px;
+  font-family: "Baskervville SC", serif;
+  letter-spacing: 1px;
+  color: #d9e2f7;
+  border-bottom: 5px solid red;
+}
+
+.drafts-season {
+  font-size: 28px;
+  font-family: "Baskervville SC", serif;
+}
+
+.display-draft-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Baskervville SC", serif;
+  font-size: 14px;
+  background-color: #5c7cfa;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  letter-spacing: 1px;
+}
+
+.display-draft-btn:hover {
+  filter: brightness(110%);
+}
+
+.draft-order {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.draft-slot {
+  border: 1px solid black;
+  width: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #071023;
+  color: #d9e2f7;
+  font-family: "Baskervville SC", serif;
+  gap: 5px;
+  padding: 5px 2.5px;
+}
+
+.draft-position {
+  font-size: 14px;
+}
+
+.pick-selection {
+  width: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 150px;
+  padding: 10px 5px;
+  background-color: #071023;
+  color: #d9e2f7;
+  font-family: "Baskervville SC", serif;
+}
+
+.draft-results-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.pick-details {
+  font-size: 14px;
+}
+
+.drafted-player-name {
+  font-size: 14px;
+  border-bottom: 1px solid red;
+  padding-bottom: 5px;
+}
+
+.team-drafting {
+  font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
