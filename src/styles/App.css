@@ -5,29 +5,43 @@
   box-sizing: border-box;
 }
 
-/* League Splash Pages*/
-.tran-table {
+.details-header {
+  text-align: center;
+}
+
+.trade-details {
+  width: 50%;
+}
+
+.team-assets {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.team-name {
+  width: 55%;
+  border-right: 1px solid #d9e2f7;
+  padding: 15px 0;
+}
+
+.traded-players-container {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  border-spacing: 0;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   width: 75%;
-  font-family: "Baskervville SC", serif;
 }
 
-.transactions-row {
-  color: #d9e2f7;
+.draft-picks-container {
   display: flex;
-  border-bottom: 1px solid #ddd;
-  justify-content: space-between;
-  background-color: #071023;
-  padding: 12px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  flex-direction: column;
+  padding: 0 15px;
 }
 
+.draft-pick {
+  width: 100%;
+  padding: 10px 20px;
+}
 .transactions-header {
   background-color: #071023;
   font-weight: bold;
@@ -42,8 +56,8 @@
 }
 
 .player-image {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid white;
 }
@@ -51,7 +65,6 @@
 .added-div {
   display: flex;
   align-items: center;
-  margin-left: 0;
   gap: 15px;
   width: 100%;
 }
@@ -72,10 +85,6 @@
 .waiver-bid {
   color: white;
   width: 10%;
-}
-
-.picks-involved {
-  width: 12.5%;
 }
 
 .tran-type {
@@ -110,7 +119,7 @@
   width: 20%;
 }
 
-.transactions-button {
+.load-more {
   align-self: center;
   padding: 12px 20px;
   border: none;
@@ -123,9 +132,11 @@
   transition: background-color 0.3s, transform 0.2s;
   letter-spacing: 1px;
   width: 25%;
+  margin-top: 25px;
+  margin-bottom: 50px;
 }
 
-.transactions-button:hover {
+.load-more:hover {
   background-color: #4a68d8; /* Darker shade on hover */
   transform: translateY(-3px);
 }
@@ -142,73 +153,34 @@
   font-family: "Baskervville SC", serif;
 }
 
-.schedules-container {
+.trade-users {
+  width: 25%;
   display: flex;
   flex-direction: column;
   gap: 5px;
-
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 75%;
-  font-family: "Baskervville SC", serif;
+  justify-content: center;
+  align-items: center;
 }
 
-.team-schedules {
-  list-style: none;
-  line-height: 1.5;
-  font-family: "Baskervville SC", serif;
-  font-size: 18px;
+.trading-team {
+  font-size: 16px;
+  border-bottom: 1px solid white;
+  padding-bottom: 2.5px;
+  margin-bottom: 2.5px;
+}
+.team-sends {
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.schedule-name-title {
-  text-align: center;
-}
-
-.win {
-  color: lightgreen;
-}
-
-.loss {
-  color: red;
-}
-.neutral {
-  color: white;
-}
-.win,
-.loss,
-.neutral {
+.traded-player {
+  width: 80%;
   display: flex;
-  gap: 10px;
-  border-bottom: 0.5px solid grey;
-  padding: 5px 0;
-  width: fit-content;
-}
-
-.schedule-week {
-  width: 100px;
-}
-.schedule-opponent {
-  width: 175px;
-  border-right: 0.5px solid black;
-}
-.schedule-score {
-  width: 150px;
-}
-.schedule-result {
-  width: 100px;
-}
-
-.schedules-accordian {
-  color: #d9e2f7;
-  width: 100%;
-  display: flex;
-  border-bottom: 1px solid #ddd;
-  font-size: 18px;
-  font-family: "Baskervville SC", serif;
-  background-color: #071023;
-  padding: 12px 16px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  align-items: center;
+  padding-left: 10%;
+  gap: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
