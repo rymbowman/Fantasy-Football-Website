@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../sidebar/Sidebar.css";
+import "../../styles/App.css";
 import SidebarIcon from "./SidebarIcon";
 import DropdownSidebarIcon from "./DropdownSidebarIcon";
 const Sidebar = () => {
