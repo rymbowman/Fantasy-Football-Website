@@ -1,8 +1,10 @@
 import DirectoryCard from "../components/directoryCards/DirectoryCard";
+import PageHeader from "../components/pageHeaders/PageHeader";
 import "../styles/LeagueSplashPages.css";
 const LeagueInfo = () => {
   return (
     <div className="directory-pages">
+      <PageHeader category={"directory"} pageTitle={"League Information"} />
       <DirectoryCard
         link={"/standings"}
         title={"Standings/Rankings"}
@@ -17,11 +19,6 @@ const LeagueInfo = () => {
         link={"/transactions"}
         title={"Transactions"}
         id={"transactions-card"}
-      />
-      <DirectoryCard
-        link={"/league-leaders"}
-        title={"League Leaders"}
-        id={"league-leaders-card"}
       />
     </div>
   );

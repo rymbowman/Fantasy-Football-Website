@@ -15,3 +15,22 @@
   margin-left: 250px;
   width: calc(100% - 250px);
 }
+
+.directory-header-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  background: linear-gradient(135deg, #222, #3a3a3a);
+  height: 200px;
+  width: 100%;
+}
+
+.directory-h1 {
+  font-size: 54px;
+  font-family: "Baskervville SC", serif;
+  letter-spacing: 1px;
+  color: #d9e2f7;
+  border-bottom: 5px solid red;
+}

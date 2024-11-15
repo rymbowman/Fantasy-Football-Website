@@ -1,10 +1,12 @@
 import DirectoryCard from "../components/directoryCards/DirectoryCard";
 import ExternalLinkCard from "../components/directoryCards/ExternalLinkCard";
+import PageHeader from "../components/pageHeaders/PageHeader";
 import "../styles/LeagueSplashPages.css";
 
 const Resources = () => {
   return (
     <div className="directory-pages">
+      <PageHeader category={"directory"} pageTitle={"Resources"} />
       <ExternalLinkCard
         link={""}
         title={"Dynasty Rankings"}
