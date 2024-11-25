@@ -7,18 +7,18 @@ const LeagueInfo = () => {
       <PageHeader category={"directory"} pageTitle={"League Information"} />
       <DirectoryCard
         link={"/standings"}
-        title={"Standings/Rankings"}
+        title={"Standings"}
         id={"standings-rankings-card"}
-      />
-      <DirectoryCard
-        link={"/schedules"}
-        title={"Schedules"}
-        id={"schedules-card"}
       />
       <DirectoryCard
         link={"/transactions"}
         title={"Transactions"}
         id={"transactions-card"}
+      />
+      <DirectoryCard
+        link={"/schedules"}
+        title={"Schedules"}
+        id={"schedules-card"}
       />
     </div>
   );
