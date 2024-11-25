@@ -152,6 +152,9 @@
   .nav-tooltip {
     margin-top: 35px;
   }
+  .dropdown-icons-div .nav-tooltip {
+    margin-top: 35px;
+  }
   .dropdown-active {
     padding: 12px;
     max-height: 450px;
@@ -184,6 +187,9 @@
     font-size: 20px;
   }
   .nav-tooltip {
+    margin-top: 30px;
+  }
+  .dropdown-icons-div .nav-tooltip {
     margin-top: 30px;
   }
   .dropdown-active {
