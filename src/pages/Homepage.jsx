@@ -4,7 +4,7 @@ import "../styles/Homepage.css";
 const Homepage = () => {
   return (
     <div className="homepage">
-      <HomepageHeader />;
+      <HomepageHeader />
       <div className="homepage-main-content">
         <h3 className="homepage-titles">Top Headlines</h3>
         <CurrentSlideAction />
