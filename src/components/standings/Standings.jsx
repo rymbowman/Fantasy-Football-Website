@@ -75,9 +75,10 @@ const Standings = () => {
                   <p className="record">
                     {team.wins}-{team.losses}-{team.ties}
                   </p>
-                  <p className="points">
-                    PF: {team.pointsFor} &nbsp; PA: {team.pointsAgainst}
-                  </p>
+                  <div className="points">
+                    <div>PF: {team.pointsFor}</div>
+                    <div>PA: {team.pointsAgainst}</div>
+                  </div>
                 </div>
               </div>
             ))}

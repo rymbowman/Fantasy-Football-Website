@@ -167,53 +167,59 @@ const LeagueTrans = () => {
                   <div className="added-players-container">
                     {tran.adds && Object.keys(tran.adds).length > 0 ? (
                       Object.keys(tran.adds).map((id) => (
-                        <div key={id} className="added-player">
+                        <>
                           <p className="transaction-icon">
                             <i className="bx bx-plus-circle plus-icon"></i>
                           </p>
-                          <img
-                            src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
-                            alt={players[id]?.full_name || "unknown player"}
-                            className="player-image"
-                          />
-                          <p className="">
-                            {players[id]?.full_name} - {players[id]?.position}{" "}
-                            {players[id]?.team}
-                          </p>
-                        </div>
+                          <div key={id} className="added-player">
+                            <img
+                              src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
+                              alt={players[id]?.full_name || "unknown player"}
+                              className="player-image"
+                            />
+                            <p className="player-name">
+                              {players[id]?.full_name} - {players[id]?.position}{" "}
+                              {players[id]?.team}
+                            </p>
+                          </div>
+                        </>
                       ))
                     ) : (
-                      <div className="added-player">
+                      <>
                         <p className="transaction-icon">
                           <i className="bx bx-plus-circle plus-icon"></i>
                         </p>
-                      </div>
+                        <div className="added-player"></div>
+                      </>
                     )}
                   </div>
                   <div className="dropped-players-container">
                     {tran.drops && Object.keys(tran.drops).length > 0 ? (
                       Object.keys(tran.drops).map((id) => (
-                        <div key={id} className="dropped-player">
+                        <>
                           <p className="transaction-icon">
                             <i className="bx bx-minus-circle minus-icon"></i>
                           </p>
-                          <img
-                            src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
-                            alt={players[id]?.full_name || "unknown player"}
-                            className="player-image"
-                          />
-                          <p>
-                            {players[id]?.full_name} - {players[id]?.position}{" "}
-                            {players[id]?.team}
-                          </p>
-                        </div>
+                          <div key={id} className="dropped-player">
+                            <img
+                              src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
+                              alt={players[id]?.full_name || "unknown player"}
+                              className="player-image"
+                            />
+                            <p>
+                              {players[id]?.full_name} - {players[id]?.position}{" "}
+                              {players[id]?.team}
+                            </p>
+                          </div>
+                        </>
                       ))
                     ) : (
-                      <div className="dropped-player">
+                      <>
                         <p className="transaction-icon">
                           <i className="bx bx-minus-circle minus-icon"></i>
                         </p>
-                      </div>
+                        <div className="dropped-player"></div>
+                      </>
                     )}
                   </div>
                 </div>
