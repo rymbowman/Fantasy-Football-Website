@@ -11,7 +11,6 @@ import Members from "./pages/Members";
 import Resources from "./pages/Resources";
 import History from "./pages/History";
 import Standings from "./components/standings/Standings";
-import "./constants/data/teamsData";
 import Podcasts from "./components/podcasts/Podcasts";
 import Schedules from "./components/schedules/Schedules";
 import Drafts from "./components/drafts/Drafts";
@@ -31,9 +30,9 @@ const router = createBrowserRouter(
       <Route path="/transactions" element={<LeagueTrans />} />
       <Route path="/league-leaders" />
       <Route path="/trade-block" />
-      <Route path="/past-punishments" element={<Punishment />} />
+      <Route path="/league-punishments" element={<Punishment />} />
       <Route path="/past-champions" element={<PreviousChampions />} />
-      <Route path="/draft-results" element={<Drafts />} />
+      <Route path="/draft-classes" element={<Drafts />} />
       <Route path="/records" />
       <Route path="/podcasts" element={<Podcasts />} />
     </Route>
