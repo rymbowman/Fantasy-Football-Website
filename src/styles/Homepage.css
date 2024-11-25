@@ -29,10 +29,17 @@
   }
 }
 
-/* Mobile (Small Screens) */
 @media (max-width: 768px) {
   .homepage-titles {
     font-size: 32px;
-    width: 75%;
+    width: 85%;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .homepage-titles {
+    font-size: 28px;
+    width: 90%;
   }
 }

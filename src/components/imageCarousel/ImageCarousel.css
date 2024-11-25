@@ -101,12 +101,19 @@
     width: 700px;
     height: 450px;
   }
+  .text {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 768px) {
   .slideshow-carousel {
     width: 550px;
     height: 400px;
+  }
+  .text {
+    font-size: 22px;
+    bottom: 10px;
   }
 }
 
@@ -115,12 +122,42 @@
     width: 400px;
     height: 300px;
   }
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+  .text {
+    font-size: 20px;
+    bottom: 10px;
+  }
 }
 
 /* Mobile (Small Screens) */
 @media (max-width: 440px) {
   .slideshow-carousel {
-    width: 350px;
+    width: 325px;
     height: 250px;
+  }
+  .text {
+    font-size: 18px;
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  .slideshow-carousel {
+    width: 250px;
+    height: 175px;
+  }
+  .carousel-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    margin-top: -14px;
+  }
+  .text {
+    font-size: 16px;
+    bottom: 10px;
   }
 }
