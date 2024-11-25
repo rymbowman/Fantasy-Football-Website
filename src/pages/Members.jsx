@@ -7,7 +7,6 @@ const Members = () => {
   return (
     <div className="members-main-content">
       <PageHeader category={"members"} pageTitle={"Our Members"} />
-
       <div className="league-members-container">
         <MemberCard />
       </div>
