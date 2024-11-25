@@ -1,19 +1,12 @@
 .directory-pages {
   display: flex;
-  margin-left: 80px;
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-color: whitesmoke;
   transition: all 0.5s ease;
-  width: calc(100% - 80px);
-}
-
-.sidebar.active ~ .directory-pages {
-  margin-left: 250px;
-  width: calc(100% - 250px);
+  padding-bottom: 50px;
 }
 
 .directory-header-div {
@@ -33,4 +26,28 @@
   letter-spacing: 1px;
   color: #d9e2f7;
   border-bottom: 5px solid red;
+  text-align: center;
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .directory-h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .directory-h1 {
+    font-size: 44px;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .directory-h1 {
+    font-size: 36px;
+  }
 }

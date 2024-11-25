@@ -1,15 +1,10 @@
 .standings-container {
-  margin-left: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
   background-color: whitesmoke;
   transition: all 0.5s ease;
-}
-
-.sidebar.active ~ .standings-container {
-  margin-left: 250px;
 }
 
 .standings-header-div {
@@ -30,6 +25,7 @@
   color: #d9e2f7;
   border-bottom: 5px solid red;
   width: fit-content;
+  text-align: center;
 }
 
 .standings {
@@ -78,7 +74,10 @@
 }
 
 .standings-data {
-  width: 25%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .name {
@@ -99,4 +98,90 @@
 .points {
   font-size: 14px;
   text-align: right;
+  display: flex;
+  justify-content: end;
+  gap: 5%;
+  width: 100%;
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .standings-h1 {
+    font-size: 48px;
+  }
+  .standings {
+    width: 75%;
+  }
+  .standings-data {
+    width: 40%;
+  }
+}
+
+@media (max-width: 575px) {
+  .standings-h1 {
+    font-size: 44px;
+  }
+  .standings {
+    width: 80%;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .standings-h1 {
+    font-size: 36px;
+  }
+  .standings-row {
+    padding: 10px 5px;
+  }
+  .standings {
+    width: 85%;
+  }
+  .standings-position {
+    width: 5%;
+    font-size: 16px;
+    align-items: center;
+    display: flex;
+  }
+  .standings-details {
+    width: 60%;
+  }
+  .name {
+    font-size: 14px;
+  }
+  .username {
+    font-size: 10px;
+  }
+  .standings-data {
+    width: 40%;
+  }
+  .record {
+    font-size: 14px;
+  }
+  .points {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 300px) {
+  .standings-details {
+    width: 70%;
+  }
+  .standings-data {
+    width: 30%;
+  }
+  .name {
+    font-size: 12px;
+  }
+  .record {
+    font-size: 12px;
+  }
+  .points {
+    display: flex;
+    flex-direction: column;
+    font-size: 8px;
+  }
 }

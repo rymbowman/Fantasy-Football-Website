@@ -7,8 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding-bottom: 75px;
+  width: 100%;
 }
 
 #homepage-title {
@@ -42,4 +42,39 @@
   font-size: 20px;
   font-family: "Baskervville SC", serif;
   font-weight: bold;
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+  #homepage-title {
+    font-size: 60px;
+    width: 70%;
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  #homepage-title {
+    font-size: 50px;
+    width: 70%;
+    padding-top: 125px;
+  }
+}
+
+@media (max-width: 650px) {
+  #homepage-title {
+    font-size: 45px;
+  }
+
+  #verse-of-day {
+    font-size: 22px;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  #homepage-title {
+    width: 75%;
+    padding-top: 100px;
+  }
 }

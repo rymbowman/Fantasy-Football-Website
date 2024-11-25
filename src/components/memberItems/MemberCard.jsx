@@ -27,8 +27,7 @@ const MemberCard = () => {
               src={member.img}
               alt={`pic of ${member.name}`}
             />
-            <h2>{member.name}</h2>
-            <p className="card-title">{member.nickName}</p>
+            <h2 className="card-name">{member.name}</h2>
           </div>
         );
       })}

@@ -1,13 +1,12 @@
 .member-card {
-  width: 100%;
-  max-width: 400px;
+  width: 350px;
   height: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: #071023;
-  padding: 20px;
+  padding: 15px;
   font-family: "Baskervville SC", serif;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -23,21 +22,25 @@
 }
 
 .member-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  width: 250px;
+  height: 275px;
   margin: 10px auto;
   border: none;
   border-radius: 10px;
   transition: transform 0.3s;
+  object-fit: cover;
 }
 
 .member-img:hover {
   transform: scale(1.03);
 }
 
+.card-name {
+  font-size: 25px;
+}
+
 .card-title {
-  font-size: 22px;
+  font-size: 20px;
   padding-bottom: 5px;
   font-weight: 500;
 }
@@ -72,6 +75,7 @@
     transform: translateY(0);
   }
 }
+
 .member-modal {
   display: flex;
   flex-direction: column;
@@ -109,7 +113,7 @@
 
 .modal-content-header {
   font-size: 26px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-family: "Baskervville SC", serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -182,9 +186,67 @@
   transition: background-color 0.3s, transform 0.2s;
   letter-spacing: 1px;
   width: 25%;
+  text-align: center;
 }
 
 .modal-close-button:hover {
   background-color: #4a68d8; /* Darker shade on hover */
   transform: translateY(-3px);
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+  .member-card {
+    width: 250px;
+  }
+  .member-img {
+    width: 200px;
+    height: 225px;
+  }
+  .member-modal {
+    width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .member-card {
+    width: 200px;
+  }
+  .member-img {
+    width: 150px;
+    height: 175px;
+    margin: 5px auto;
+  }
+  .card-name {
+    font-size: 22px;
+  }
+  .member-modal {
+    width: 75%;
+    padding: 15px 15px;
+  }
+  .modal-close-button {
+    padding: 12px 15px;
+    letter-spacing: normal;
+  }
+}
+
+@media (max-width: 575px) {
+  .member-modal {
+    width: 80%;
+    padding: 10px 10px;
+  }
+  .modal-close-button {
+    padding: 8px 12px;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .member-modal {
+    width: 85%;
+    padding: 5px 5px;
+  }
+  .modal-close-button {
+    padding: 8px 12px;
+  }
 }

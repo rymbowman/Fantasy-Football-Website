@@ -1,15 +1,10 @@
 .previous-champions-container {
-  margin-left: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
   background-color: whitesmoke;
   transition: all 0.5s ease;
-}
-
-.sidebar.active ~ .previous-champions-container {
-  margin-left: 250px;
 }
 
 .champs-header-div {
@@ -29,4 +24,28 @@
   letter-spacing: 1px;
   color: #d9e2f7;
   border-bottom: 5px solid red;
+  text-align: center;
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .champs-h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .champs-h1 {
+    font-size: 44px;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .champs-h1 {
+    font-size: 36px;
+  }
 }

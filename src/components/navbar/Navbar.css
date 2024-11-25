@@ -1,0 +1,241 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #071023;
+  height: 60px;
+}
+
+.liberty-logo {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 40px;
+}
+
+.navbar-items {
+  display: flex;
+  width: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  align-items: center;
+}
+
+.nav-item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-icon {
+  text-align: center;
+  color: #d9e2f7;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item i {
+  font-size: 25px; /* Size of the icon */
+  transition: transform 0.2s; /* Smooth scaling effect on hover */
+}
+
+.nav-tooltip {
+  position: absolute;
+  margin-top: 45px;
+  opacity: 0;
+  font-size: 18px;
+  transition: opacity 0.2s ease; /* Smooth transition */
+  cursor: default;
+  line-height: normal;
+}
+
+.nav-item i:hover + .nav-tooltip {
+  opacity: 1; /* Show tooltip when hovering over the icon */
+  border-bottom: 2px solid red;
+  color: white;
+  font-family: "Baskervville SC", serif;
+}
+
+.dropdown-icons-div {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-icons-div .nav-tooltip {
+  position: absolute;
+  margin-top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+.dropdown-arrow {
+  font-size: 25px;
+  color: #d9e2f7;
+  cursor: pointer;
+}
+
+.dropdown {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.dropdown-active {
+  max-height: 500px;
+  width: 150px;
+  position: absolute;
+  opacity: 1;
+  top: 45px;
+  padding: 15px;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1.5px 1.5px 1.5px;
+}
+
+.navbar-dropdown-title {
+  text-align: center;
+  padding: 5px 2.5px;
+  font-family: "Baskervville SC", serif;
+  font-size: 14px;
+  border-bottom: 1px solid red;
+  margin-bottom: 5px;
+}
+
+.navbar-dropdown-item {
+  list-style: none;
+  text-align: center;
+  padding: 5px 2.5px;
+  font-family: "Baskervville SC", serif;
+  font-size: 18px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-dropdown-item:hover {
+  border-bottom: 2px solid red;
+}
+
+.dropdown-link {
+  text-decoration: none;
+  color: #071023;
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+  .navbar-items {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 50px;
+  }
+  .navbar-items {
+    width: 65%;
+  }
+  .nav-tooltip {
+    margin-top: 35px;
+  }
+  .dropdown-active {
+    padding: 12px;
+    max-height: 450px;
+    top: 40px;
+  }
+  .navbar-dropdown-title {
+    padding: 5px 2.5px;
+    font-size: 14px;
+    border-bottom: 1px solid red;
+    margin-bottom: 5px;
+  }
+  .navbar-dropdown-item {
+    padding: 2.5px;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar {
+    height: 45px;
+  }
+  .navbar-items {
+    width: 75%;
+  }
+  .liberty-logo {
+    left: 10px;
+  }
+  .nav-item i {
+    font-size: 20px;
+  }
+  .nav-tooltip {
+    margin-top: 30px;
+  }
+  .dropdown-active {
+    padding: 8px;
+    max-height: 400px;
+    top: 35px;
+    width: 100px;
+  }
+  .navbar-dropdown-title {
+    font-size: 12px;
+    border-bottom: 1px solid red;
+    margin-bottom: 5px;
+  }
+  .navbar-dropdown-item {
+    padding: 2.5px;
+    font-size: 12px;
+    border-bottom: 2px solid transparent;
+  }
+  .navbar-dropdown-item:hover {
+    border-bottom: 1px solid red;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .liberty-logo {
+    left: 5px;
+    display: none;
+  }
+  .navbar-items {
+    width: 95%;
+  }
+  .nav-item i {
+    font-size: 18px;
+  }
+  .nav-tooltip {
+    font-size: 10px;
+  }
+  .dropdown-active {
+    padding: 5px;
+    max-height: 400px;
+    top: 33px;
+  }
+  .navbar-dropdown-title {
+    padding: 2.5px;
+    font-size: 12px;
+    border-bottom: 1px solid red;
+    margin-bottom: 2.5px;
+  }
+  .navbar-dropdown-item {
+    padding: 2.5px;
+    font-size: 12px;
+    border-bottom: 1px solid transparent;
+  }
+}

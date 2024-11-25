@@ -1,5 +1,4 @@
 .drafts-container {
-  margin-left: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,6 +42,7 @@
   letter-spacing: 1px;
   color: #d9e2f7;
   border-bottom: 5px solid red;
+  text-align: center;
 }
 
 .drafts-season {
@@ -134,5 +134,28 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .drafts-h1 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .drafts-h1 {
+    font-size: 44px;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .drafts-h1 {
+    font-size: 36px;
   }
 }

@@ -1,15 +1,10 @@
 .punishments-container {
-  margin-left: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
   background-color: whitesmoke;
   transition: all 0.5s ease;
-}
-
-.sidebar.active ~ .punishments-container {
-  margin-left: 250px;
 }
 
 .punishments-header-div {
@@ -29,5 +24,116 @@
   letter-spacing: 1px;
   color: #d9e2f7;
   border-bottom: 5px solid red;
-  width: fit-content;
+  text-align: center;
+}
+
+.punishment-content {
+  display: flex;
+  padding: 25px 75px;
+  gap: 5%;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.punishment-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Baskervville SC", serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.punishment-img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  white-space: none;
+}
+
+.carousel-img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Fade in/out with 1 second duration */
+}
+
+.carousel-img.fade-in {
+  opacity: 1;
+}
+
+.punishments-container-a {
+  flex-direction: row;
+}
+
+.punishments-container-b {
+  flex-direction: row-reverse;
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .punishments-h1 {
+    font-size: 48px;
+  }
+  .punishment-text {
+    font-size: 18px;
+  }
+  .punishment-content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    padding: 20px 50px;
+  }
+  .carousel-img {
+    width: 275px;
+    height: 350px;
+  }
+  .punishment-img {
+    width: 275px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 575px) {
+  .punishments-h1 {
+    font-size: 44px;
+  }
+  .punishment-content {
+    padding: 15px 30px;
+  }
+  .punishment-text {
+    font-size: 16px;
+  }
+  .carousel-img {
+    width: 225px;
+    height: 275px;
+  }
+  .punishment-img {
+    width: 225px;
+    height: 275px;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .punishments-h1 {
+    font-size: 36px;
+  }
+  .punishment-text {
+    font-size: 15px;
+  }
+  .carousel-img {
+    width: 200px;
+    height: 250px;
+  }
+  .punishment-img {
+    width: 200px;
+    height: 250px;
+  }
 }

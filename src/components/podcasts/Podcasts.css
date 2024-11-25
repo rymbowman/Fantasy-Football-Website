@@ -1,15 +1,10 @@
 .podcasts-container {
-  margin-left: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
   background-color: whitesmoke;
   transition: all 0.5s ease;
-}
-
-.sidebar.active ~ .podcasts-container {
-  margin-left: 250px;
 }
 
 .podcasts-header-div {
@@ -29,6 +24,7 @@
   letter-spacing: 1px;
   color: #d9e2f7;
   border-bottom: 5px solid red;
+  text-align: center;
 }
 
 .podcasts-list {
@@ -73,4 +69,32 @@
   flex-direction: column;
   align-items: center;
   font-family: "Baskervville SC", serif;
+}
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+  .podcast-li {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .podcast-li {
+    width: 275px;
+  }
+  .podcast-img {
+    width: 225px;
+    height: 225px;
+  }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 440px) {
+  .podcast-li {
+    width: 250px;
+  }
+  .podcast-img {
+    width: 200px;
+    height: 200px;
+  }
 }
