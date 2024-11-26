@@ -9,7 +9,9 @@ const Resources = () => {
     <div className="directory-pages">
       <PageHeader category={"directory"} pageTitle={"Resources"} />
       <ExternalLinkCard
-        link={""}
+        link={
+          "https://www.footballguys.com/rankings/duration/dynasty?pos=all#more"
+        }
         title={"Dynasty Rankings"}
         id={"dynasty-rankings-card"}
       />
@@ -19,7 +21,7 @@ const Resources = () => {
         id={"podcasts-card"}
       />
       <ExternalLinkCard
-        link={"/transactions"}
+        link={"https://dynastyleaguefootball.com/trade-analyzer/"}
         title={"Trade Calculator"}
         id={"trade-calc-card"}
       />
