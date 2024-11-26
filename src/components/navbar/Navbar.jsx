@@ -10,6 +10,9 @@ const Navbar = () => {
     setActiveDropdown((prev) => (prev === index ? null : index)); // Toggle dropdown state
   };
 
+  const closeDropdown = () => {
+    setActiveDropdown(null);
+  };
   return (
     <div className="navbar">
       <img
@@ -22,11 +25,13 @@ const Navbar = () => {
           link={"/"}
           iconImage={"bx bxs-home-alt-2"}
           tooltip={"Home"}
+          closeDropdown={closeDropdown}
         />
         <NavbarItem
           link={"/members"}
           iconImage={"bx bxs-user"}
           tooltip={"Members"}
+          closeDropdown={closeDropdown}
         />
         <DropdownSidebarIcon
           link={"/league"}
@@ -40,6 +45,7 @@ const Navbar = () => {
           tooltip={"League"}
           isActive={activeDropdown === 0} // Pass active state
           toggleDropdown={() => toggleDropdown(0)} // Pass toggle function
+          closeDropdown={closeDropdown}
         />
         <DropdownSidebarIcon
           link={"/history"}
@@ -53,6 +59,7 @@ const Navbar = () => {
           tooltip={"History"}
           isActive={activeDropdown === 1} // Pass active state
           toggleDropdown={() => toggleDropdown(1)} // Pass toggle function
+          closeDropdown={closeDropdown}
         />
         <DropdownSidebarIcon
           link={"/resources"}
@@ -66,6 +73,7 @@ const Navbar = () => {
           tooltip={"Resources"}
           isActive={activeDropdown === 2} // Pass active state
           toggleDropdown={() => toggleDropdown(2)} // Pass toggle function
+          closeDropdown={closeDropdown}
         />
       </div>
     </div>

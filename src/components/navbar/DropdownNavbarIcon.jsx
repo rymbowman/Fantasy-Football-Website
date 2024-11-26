@@ -9,12 +9,13 @@ const DropdownNavbarIcon = ({
   page,
   isActive,
   toggleDropdown,
+  closeDropdown,
 }) => {
   return (
     <>
       <div className="nav-item">
         <div className="dropdown-icons-div">
-          <Link to={link} className="nav-link">
+          <Link to={link} className="nav-link" onClick={closeDropdown}>
             <i className={`${iconImage} nav-icon`}></i>
             <p className="nav-tooltip" onClick={(e) => e.preventDefault()}>
               {tooltip}
@@ -30,7 +31,11 @@ const DropdownNavbarIcon = ({
           <h6 className="navbar-dropdown-title">{page}</h6>
           {dropdownItems.map((item, index) => (
             <li className="navbar-dropdown-item" key={index}>
-              <Link to={item.link} className="dropdown-link">
+              <Link
+                to={item.link}
+                className="dropdown-link"
+                onClick={toggleDropdown}
+              >
                 {item.label}
               </Link>
             </li>
@@ -49,5 +54,6 @@ DropdownNavbarIcon.propTypes = {
   page: PropTypes.string.isRequired,
   isActive: PropTypes.bool.isRequired,
   toggleDropdown: PropTypes.func.isRequired,
+  closeDropdown: PropTypes.func.isRequired,
 };
 export default DropdownNavbarIcon;
