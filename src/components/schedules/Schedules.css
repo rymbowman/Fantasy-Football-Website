@@ -70,7 +70,6 @@
   align-items: center;
   background-color: #d9e2f7;
   padding: 15px 0;
-  border: 3px solid black;
 }
 
 .schedule-name-title {
@@ -101,23 +100,19 @@
 
 .schedule-week {
   width: 15%;
-  border: 1px solid black;
 }
 
 .schedule-opponent {
   width: 40%;
   border-right: 0.5px solid black;
-  border: 1px solid black;
 }
 
 .schedule-score {
   width: 25%;
-  border: 1px solid black;
 }
 
 .schedule-result {
   width: 10%;
-  border: 1px solid black;
 }
 
 .schedules-accordian:hover {

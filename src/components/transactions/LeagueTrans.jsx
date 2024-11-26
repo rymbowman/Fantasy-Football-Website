@@ -167,11 +167,12 @@ const LeagueTrans = () => {
                   <div className="added-players-container">
                     {tran.adds && Object.keys(tran.adds).length > 0 ? (
                       Object.keys(tran.adds).map((id) => (
-                        <>
-                          <p className="transaction-icon">
-                            <i className="bx bx-plus-circle plus-icon"></i>
-                          </p>
-                          <div key={id} className="added-player">
+                        <div key={id} className="added-player">
+                          <div className="player-content">
+                            <p className="transaction-icon">
+                              <i className="bx bx-plus-circle plus-icon"></i>
+                            </p>
+
                             <img
                               src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
                               alt={players[id]?.full_name || "unknown player"}
@@ -182,25 +183,27 @@ const LeagueTrans = () => {
                               {players[id]?.team}
                             </p>
                           </div>
-                        </>
+                        </div>
                       ))
                     ) : (
-                      <>
-                        <p className="transaction-icon">
-                          <i className="bx bx-plus-circle plus-icon"></i>
-                        </p>
-                        <div className="added-player"></div>
-                      </>
+                      <div className="added-player">
+                        <div className="player-content">
+                          {" "}
+                          <p className="transaction-icon">
+                            <i className="bx bx-plus-circle plus-icon"></i>
+                          </p>
+                        </div>
+                      </div>
                     )}
                   </div>
                   <div className="dropped-players-container">
                     {tran.drops && Object.keys(tran.drops).length > 0 ? (
                       Object.keys(tran.drops).map((id) => (
-                        <>
-                          <p className="transaction-icon">
-                            <i className="bx bx-minus-circle minus-icon"></i>
-                          </p>
-                          <div key={id} className="dropped-player">
+                        <div key={id} className="dropped-player">
+                          <div className="player-content">
+                            <p className="transaction-icon">
+                              <i className="bx bx-minus-circle minus-icon"></i>
+                            </p>
                             <img
                               src={`https://sleepercdn.com/content/nfl/players/${id}.jpg`}
                               alt={players[id]?.full_name || "unknown player"}
@@ -211,15 +214,16 @@ const LeagueTrans = () => {
                               {players[id]?.team}
                             </p>
                           </div>
-                        </>
+                        </div>
                       ))
                     ) : (
-                      <>
-                        <p className="transaction-icon">
-                          <i className="bx bx-minus-circle minus-icon"></i>
-                        </p>
-                        <div className="dropped-player"></div>
-                      </>
+                      <div className="dropped-player">
+                        <div className="player-content">
+                          <p className="transaction-icon">
+                            <i className="bx bx-minus-circle minus-icon"></i>
+                          </p>
+                        </div>
+                      </div>
                     )}
                   </div>
                 </div>
