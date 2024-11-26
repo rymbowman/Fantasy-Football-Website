@@ -30,36 +30,48 @@
 .podcasts-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  padding: 25px;
-  margin-top: 35px;
   justify-content: center;
+  padding-bottom: 50px;
+  gap: 30px;
+  padding: 0 20px;
+  margin-top: 50px;
 }
 
 .podcast-li {
-  border-radius: 10px;
-  width: 350px;
-  list-style: none;
-  padding: 14px;
-  font-size: 18px;
+  width: 300px;
+  height: 350px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.5);
+  color: #071023;
+  padding: 15px;
+  font-family: "Baskervville SC", serif;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 10px;
   cursor: pointer;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .podcast-li:hover {
   transform: translateY(-10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #f0f0f0;
 }
+
 .podcast-img {
   width: 250px;
   height: 250px;
-  margin-bottom: 20px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  object-fit: cover;
+}
+
+.podcast-img:hover {
+  transform: scale(1.03);
 }
 
 .podcast-link {
@@ -69,18 +81,18 @@
   flex-direction: column;
   align-items: center;
   font-family: "Baskervville SC", serif;
+  margin-top: 15px;
+  font-size: 20px;
 }
 
 /* Tablet (Medium Screens) */
 @media (max-width: 1024px) {
-  .podcast-li {
-    width: 300px;
-  }
 }
 
 @media (max-width: 768px) {
   .podcast-li {
     width: 275px;
+    height: 325px;
   }
   .podcast-img {
     width: 225px;
@@ -91,10 +103,15 @@
 /* Mobile (Small Screens) */
 @media (max-width: 440px) {
   .podcast-li {
-    width: 250px;
+    width: 225px;
+    height: 275px;
   }
   .podcast-img {
     width: 200px;
     height: 200px;
+  }
+  .podcast-link {
+    margin-top: 2.5px;
+    font-size: 16px;
   }
 }
