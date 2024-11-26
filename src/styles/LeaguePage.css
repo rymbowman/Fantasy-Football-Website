@@ -1,50 +1,32 @@
 #standings-rankings-card {
-  background-image: url(../src/assets/images/standings-background-img.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/images/standings-background-img.png);
 }
 
 #standings-rankings-card:hover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../src/assets/images/standings-background-img.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../assets/images/standings-background-img.png);
 }
 
 #schedules-card {
-  background-image: url(../assets/images/schedules-pic.jpg);
-}
-
-#schedules-card:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(../assets/images/schedules-pic.jpg);
 }
 
-.standings-rankings-titles {
-  display: flex;
-  width: 90%;
-  margin-left: 5%;
-  text-decoration: underline;
-  padding-top: 15px;
+#schedules-card:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../assets/images/schedules-pic.jpg);
 }
 
-#standings-title {
-  width: 30%;
-  text-align: center;
-  margin-left: 8.75%;
+#transactions-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/images/transactions.jpg);
+  background-size: cover; /* Ensures the image covers the entire card */
+  background-position: center; /* Centers the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
 }
 
-#pr-title {
-  width: 30%;
-  text-align: center;
-  margin-left: 22.5%;
-}
-
-.rankings-standings-container {
-  display: flex;
-  width: 90%;
-  margin-left: 5%;
-  height: 70vh;
-}
-
-#power-rankings-container {
-  width: 47.5%;
-  margin-top: 7.5px;
-  margin-left: 5%;
+#transactions-card:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../assets/images/transactions.jpg);
 }

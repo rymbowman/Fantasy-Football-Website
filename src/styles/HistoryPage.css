@@ -1,1 +1,38 @@
+#champs-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/images/champs.png);
+  background-size: cover; /* Ensures the image covers the entire card */
+  background-position: center; /* Centers the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
 
+#punishments-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/images/loser.png);
+  background-size: cover; /* Ensures the image covers the entire card */
+  background-position: center; /* Centers the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+#drafts-card {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../assets/images/draft.png);
+  background-size: cover; /* Ensures the image covers the entire card */
+  background-position: center; /* Centers the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+#champs-card:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../assets/images/champs.png);
+}
+
+#punishments-card:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../assets/images/loser.png);
+}
+
+#drafts-card:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../assets/images/draft.png);
+}
