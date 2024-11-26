@@ -4,7 +4,13 @@ import "../directoryCards/DirectoryCards.css";
 const ExternalLinkCard = (props) => {
   return (
     <>
-      <a href={props.link} className="card-pathways" id={props.id}>
+      <a
+        href={props.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="card-pathways"
+        id={props.id}
+      >
         <div>
           <h3 className="card-heading">{props.title}</h3>
         </div>
