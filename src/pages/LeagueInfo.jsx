@@ -1,6 +1,7 @@
 import DirectoryCard from "../components/directoryCards/DirectoryCard";
 import PageHeader from "../components/pageHeaders/PageHeader";
 import "../styles/LeagueSplashPages.css";
+import "../styles/LeaguePage.css";
 const LeagueInfo = () => {
   return (
     <div className="directory-pages">

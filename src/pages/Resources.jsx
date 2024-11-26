@@ -2,6 +2,7 @@ import DirectoryCard from "../components/directoryCards/DirectoryCard";
 import ExternalLinkCard from "../components/directoryCards/ExternalLinkCard";
 import PageHeader from "../components/pageHeaders/PageHeader";
 import "../styles/LeagueSplashPages.css";
+import "../styles/Resources.css";
 
 const Resources = () => {
   return (
