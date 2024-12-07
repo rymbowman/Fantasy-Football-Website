@@ -15,7 +15,6 @@ const memberData = [
       "Kareem Hunt",
       "Trade completed with Micah (August, 2020)",
     ],
-    allTimeRecord: "41-37",
     bio: [
       "Ryan, a dedicated and passionate fantasy football enthusiast, has been building his legacy in the competitive world of fantasy sports for several years. Despite a respectable all-time record of 36-32, he is still in pursuit of his first Flames Fantasy Championship. Residing in the vibrant and spirited region of Southern New Jersey, Ryan shares his life with his loving wife of over two years. Together, they embrace the thrills and challenges of life, supporting each other through every high and low.",
       "A fervent supporter of the Philadelphia Eagles, Ryans devotion to the sport extends beyond the realm of fantasy football. His passion for the game is evident in every decision he makes, both as a fan and as a fantasy football manager. With a keen eye for talent and a strategic mind, Ryan has meticulously crafted a roster that is not only poised to win now but is also built to remain competitive for years to come.",
@@ -42,7 +41,6 @@ const memberData = [
       "David Johnson, Carson Wentz",
       "Trade completed with Simon (October, 2019)",
     ],
-    allTimeRecord: "39-39",
     bio: [
       "Cole has been a cornerstone of the league since its inception in 2019, bringing his unique blend of bold strategy and constant activity to the table. Known for his sharp eye during drafts, Cole has secured some of the league’s best talent over the years, including stars like Joe Burrow, Jalen Hurts, and Christian McCaffrey. However, his propensity for trading has earned him a reputation as the league's most trigger-happy manager, often parting ways with future legends a bit too soon. Despite some questionable trades, Cole cemented his legacy with a dominant championship run in 2021, a season that still stands as a high-water mark in his career.",
       "Now staking his claim on Caleb Williams, Cole is eager to prove that his vision for the future remains as sharp as ever. A proud resident of South Jersey, he navigates the league alongside his fiercest rival—his brother, Ryan. Off the field, Cole is the husband to Bri, who perhaps provides the balance to his high-risk fantasy football tendencies. While his trades are a constant topic of league chatter, Cole's enthusiasm and unpredictability make him a perennial contender and one of the league's most entertaining figures.",
@@ -70,7 +68,6 @@ const memberData = [
       "Javonte Williams",
       "Trade completed with Jesse (October, 2022)",
     ],
-    allTimeRecord: "",
     bio: [
       "Miah has firmly established himself as one of the league’s premier competitors, drawing comparisons to Carter as a dominant force. A one-time champion in 2022, Miah has earned the nickname “Thanos” for his seemingly inevitable rise to power and unrelenting presence in the league’s upper echelon. Known for his shrewd dealings, he has skillfully manipulated some of the league’s less savvy traders, building what many refer to as a “farm system” consisting of players and picks from Cole, Jesse, and Jose. As a perennial member of the league's top five, Miah has proven himself a strategist and competitor who thrives in the long game, showing no signs of slowing down.",
       "Outside the world of fantasy football, Miah is equally accomplished. A devoted husband and father to five, he balances his competitive spirit with a rich family life. Residing in Maryland, he brings a high level of skill and dedication to whatever he pursues, from sports to various other talents. His reputation in the league as a calculated and dominant presence mirrors his approach to life: determined, resourceful, and unwilling to settle for less than excellence.",
@@ -97,7 +94,6 @@ const memberData = [
       "Carson Wentz, George Kittle",
       "Trade completed with Cole (September, 2021)",
     ],
-    allTimeRecord: "",
     bio: [
       "Carter has been a cornerstone of the league since its inception, quickly earning a reputation as one of its most dominant players. His early success, highlighted by back-to-back championships in the league’s first two seasons, earned him the nickname “Thanos” for his seemingly unstoppable reign. While the past few seasons have tested his resilience, Carter remains a fixture among the league’s top five and a consistent contender. Known for his strategic prowess and competitive spirit, he is always a threat to reclaim his place atop the standings. To some, he’s the league’s villain, but to all, he’s a respected rival.",
       "Off the field, Carter balances his fantasy ambitions with his role as a devoted father to four children and a loving husband. He lives in Maryland, where he serves in a full-time college ministry, investing his energy and passion into shaping the lives of others. Whether on the fantasy gridiron or in his everyday life, Carter embodies dedication and excellence, making him a formidable force in all arenas.",
@@ -124,7 +120,6 @@ const memberData = [
       "Bryce Young",
       "Trade completed with Bow (November, 2023)",
     ],
-    allTimeRecord: "",
     bio: [
       "Jacob, a Maryland resident alongside league heavyweights Carter and Miah, has carved out a unique role as the little brother of fantasy football in the league. While his peers have found great success, Jacob's journey has been marked by bold risks and tough lessons. In his early years, he mortgaged his future to chase short-term success, only to see his team fall into a historic slump. His questionable decisions culminated in becoming the league's ultimate loser, leading to his unforgettable comedy skit punishment in 2023. Despite these challenges, Jacob is now embarking on a slow and determined rebuild, placing his hopes in Bryce Young as the foundation of his future success.",
       "There’s a glimmer of optimism in Jacob’s camp, as Kyle has joined as co-manager and advisor, bringing fresh strategy and guidance to the struggling franchise. Together, they aim to rebuild from the ground up and restore competitiveness to a team that has often found itself in the league's basement. Off the fantasy field, Jacob is a devoted husband and father, deeply committed to his role as a leader in Young Life and as a mentor to his co-workers. His passion for guiding others reflects his resilient spirit, both in life and in his pursuit of fantasy relevancy.",
@@ -151,7 +146,6 @@ const memberData = [
       "Bryce Young",
       "Trade completed with Bow (November, 2023)",
     ],
-    allTimeRecord: "",
     bio: [
       "Kyle joined the league in 2023 and quickly became a pivotal figure in its community, teaming up with Jacob in an effort to lift him out of his longstanding fantasy football struggles. A proud Patriots fan, Kyle’s loyalty to New England runs deep and even shows in his drafting choices, as seen with his bold selection of Drake Maye. Though his fantasy football prowess is still under review, his strategic mindset and fresh approach suggest he has the potential to make a strong impact in the seasons ahead.",
       "Off the field, Kyle is a devoted family man, balancing his passion for football with his responsibilities as a father to a young daughter and son. He shares a loving home in Connecticut with his wife, whose support and encouragement have been instrumental in his journey. With his roots firmly planted in his family and his team, Kyle brings both heart and grit to everything he does, on and off the fantasy gridiron.",
@@ -177,7 +171,6 @@ const memberData = [
       "Zach Ertz",
       "Trade completed with Josh (November, 2019)",
     ],
-    allTimeRecord: "",
     bio: [
       "Jose has been a founding member of the league since its inception, and he remains one of its most engaged participants, often leading in group chat activity. An avid Patriots fan, his loyalty to New England is as strong as his commitment to fantasy football. His career in the league began with a notorious lopsided trade with Carter, setting the course for his franchise for years to come. Many of his subsequent trades have been with Carter or Miah, often involving talent that slips through his fingers in exchange for questionable deals. Despite this, Jose has managed to stay a tier above teams like Jacob and Kyle’s, thanks in large part to his sharp eye for talent during the draft.",
       "Although he’s an excellent drafter, Jose’s struggles to retain top-tier talent due to frequent, unbalanced trades have hindered his ability to build a consistently strong roster. However, his future first-round picks have been a gold mine in the league for years, offering him a continual opportunity to reload and rebuild. Still, his draft acumen keeps him hopeful for future success and the dream of fantasy glory. Off the fantasy field, Jose is a dedicated husband to a wonderful wife, and together, they reside in North Carolina, where he continues to balance his family life with his undying ambition to rise to the top of the league.",
@@ -204,7 +197,6 @@ const memberData = [
       "Tyler Boyd, Jonnu Smith, 2022 1st (Miah), 2022 2nd (Miah), 2022 3rd (Miah)",
       "Trade completed with Miah (October, 2021)",
     ],
-    allTimeRecord: "",
     bio: [
       "Jesse was an original member of the league, known for his humor, unique trades, and Browns fandom. Residing in Cleveland, Ohio, he is the proud husband to a wonderful wife and father to a young son. Jesse’s fantasy journey is most famously marked by being the league’s first loser in 2019, a distinction that set the tone for future punishments with his unforgettable calendar photoshoot. Affectionately (or infamously) known as 'The Batwing,' Jesse earned a reputation for trading valuable assets to Miah for pennies on the dollar, serving as a 'terrific farm system component' in the league's trade market.",
       "Off the fantasy gridiron, Jesse devotes his life to pastoral and college ministry in Cleveland, a calling that reflects his genuine care for others. While his fantasy football success often mirrored the struggles of his beloved Browns, his ability to hit a baseball and knock down three-pointers with ease hints at a competitive edge outside of football. Having retired from fantasy football in 2024, Jesse leaves behind a legacy of laughs, memorable trades, and a commitment to community that will long be remembered by the league.",
@@ -231,7 +223,6 @@ const memberData = [
       "2020 1st (Clyde Edwards Helaire)",
       "Trade completed with Bow (April, 2020)",
     ],
-    allTimeRecord: "",
     bio: [
       "Micah has been a cornerstone of the league since its inception, bringing unwavering loyalty to the Kansas City Chiefs and their players. This devotion has delivered moments of pure joy, like having Patrick Mahomes as his franchise quarterback, but it has also led to heartbreak—most notably, the ill-fated decision to draft Clyde Edwards-Helaire first overall in the 2021 rookie draft. Micah’s time in the league has been marked by its fair share of ups and downs, including a high point in 2020 when an improbable Hollywood Brown touchdown in the playoffs helped him defeat Bowman Island. However, 2023 brought his lowest moment, as he finished last and now faces the infamous wilderness punishment.",
       "Though rumors persist that the birth of his firstborn son has delayed this wilderness exile, Micah’s commitment to the league remains steadfast. A proud husband to a wonderful wife, he balances family life with his passion for fantasy football. Living in North Carolina, he resides in the same state as Jose but shares no significant in-state rivalry with him. Micah's journey in the league reflects both the thrills and challenges of fantasy football, and he remains determined to bounce back and reclaim his spot among the league’s contenders.",
@@ -258,7 +249,6 @@ const memberData = [
       "Cam Akers, 2025 2nd",
       "Trade completed with Cole (August, 2023)",
     ],
-    allTimeRecord: "",
     bio: [
       "Simon’s journey in the league has been nothing short of remarkable. Starting with a struggling roster, he quickly found his niche by amassing an unparalleled collection of draft picks, making him a fixture in the first round year after year. His penchant for trade negotiations, often leaving his league-mates frustrated, earned him a reputation as a master tip dangler. Despite his early struggles, including an infamous second-to-last finish that led to the legendary doll date punishment (which even trended on Barstool Sports Philadelphia), Simon has turned his fortunes around. In 2023, he cemented his transformation by winning his first championship, establishing his roster as a league powerhouse with real staying power in the top 5.",
       "Known for his relentless pursuit of picks and his knack for losing ill-advised bets, Simon’s evolution from the league’s underdog to a perennial contender is a testament to his strategic vision. A devoted husband and father to three wonderful kids, he balances his family life with his passion for the Patriots and fantasy football. Still residing in Virginia, Simon seems light-years away from his early struggles, now standing as one of the league’s most formidable and calculated competitors.",
@@ -285,7 +275,6 @@ const memberData = [
       "Julio Jones, 2020 1st (1.05), 2021 2nd, 2023 3rd",
       "Trade completed with Jose (August, 2020)",
     ],
-    allTimeRecord: "",
     bio: [
       "Josh has been a steadfast member of the league since its inception, earning a reputation as a shrewd and calculated trader who rarely walks away from a deal without coming out ahead. A proud Eagles fan, in the the camp of Philadelphia loyalists in the league. Much like Micah, Josh’s performance fluctuates between the top and bottom 5, reflecting his ability to assemble competitive rosters alongside occasional setbacks. With his talent for making savvy moves, he has the potential to steal a championship in the near future, though the timeline for his first chip remains uncertain.",
       "Residing in Virginia, Josh is the devoted husband to a loving wife and brings a level-headed, even-keeled approach to the league. He avoids unnecessary rivalries and tends to focus on the bigger picture, keeping his team steadily progressing toward contention. Though he may not seek out enemies, Josh’s strategic mindset and trading acumen make him a competitor no one can afford to underestimate.",
@@ -304,7 +293,6 @@ const memberData = [
     worstPick: "TBD",
     bestTrade: ["TBD"],
     worstTrade: ["TBD"],
-    allTimeRecord: "",
     bio: [
       "Zach joined the league in 2024, stepping into the daunting task of reviving the struggling and unpromising roster left behind by Jesse. Now a resident of Florida, Zach is an avid fan of New York sports, with particular loyalty to the Jets and Mets—though league members hope his fantasy career avoids mirroring the long-suffering struggles of these franchises. As a newcomer, he faces the challenge of proving his ability to transform a roster that many doubt is championship-ready. Rumors swirl that Zach could follow in Jacob's footsteps as the league’s perennial underdog, leaving questions about whether he has what it takes to build a contender. Meanwhile, the sharks of Miah, Carter, and Josh are already circling, eager to pounce on Zach’s next budding star in hopes of landing a bargain trade.",
       "Recently married to an awesome wife, Zach brings a competitive spirit shaped by his college football days, where lingering rivalries with Cole and Micah from their corners-playing years may begin to surface. While he has yet to establish any true league rivals, early animosity hints at potential future feuds. With the odds stacked against him and predators lurking in the trade waters, Zach’s debut marks the start of what could either be a triumphant rebuild or a long road toward league mediocrity.",
