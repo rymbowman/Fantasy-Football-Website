@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const leagueId = "1048289149926760448";
 
-export const fetchMatchups = async (totalWeeks) => {
+export const fetchWeeklyMatchups = async (totalWeeks) => {
   const promises = [];
   for (let week = 1; week <= totalWeeks; week++) {
     promises.push(
@@ -52,5 +52,43 @@ export const fetchLeagueDrafts = async () => {
     `https://api.sleeper.app/v1/league/${leagueId}/drafts`
   );
   const leagueDrafts = resultsData.data;
-  return leagueDrafts
+  return leagueDrafts;
+};
+
+//for PreviousChampions component
+export const fetchPreviousLeague = async (leagueId) => {
+  const response = await axios.get(
+    `https://api.sleeper.app/v1/league/${leagueId}`
+  );
+  return response.data;
+};
+
+export const fetchRosters = async (leagueId) => {
+  const response = await axios.get(
+    `https://api.sleeper.app/v1/league/${leagueId}/rosters`
+  );
+  return response.data;
+};
+
+export const fetchUsers = async (leagueId) => {
+  const response = await axios.get(
+    `https://api.sleeper.app/v1/league/${leagueId}/users`
+  );
+  return response.data;
+};
+
+export const fetchMatchups = async (leagueId, week) => {
+  const response = await axios.get(
+    `https://api.sleeper.app/v1/league/${leagueId}/matchups/${week}`
+  );
+  return response.data;
+};
+
+export const fetchPlayers = async () => {
+  try {
+    const response = await axios.get("https://api.sleeper.app/v1/players/nfl");
+    return response.data;
+  } catch (err) {
+    console.error("error fetching players", err);
+  }
 };
