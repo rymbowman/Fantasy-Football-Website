@@ -6,17 +6,23 @@ import {
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
-import LeagueInfo from "./pages/LeagueInfo";
-import Members from "./pages/Members";
-import Resources from "./pages/Resources";
-import History from "./pages/History";
-import Standings from "./components/standings/Standings";
-import Podcasts from "./components/podcasts/Podcasts";
-import Schedules from "./components/schedules/Schedules";
-import Drafts from "./components/drafts/Drafts";
-import PreviousChampions from "./components/previousChampions/PreviousChampions";
-import LeagueTrans from "./components/transactions/LeagueTrans";
-import Punishment from "./components/punishments/Punishment";
+import { lazy, Suspense } from "react";
+const LeagueInfo = lazy(() => import("./pages/LeagueInfo"));
+const Members = lazy(() => import("./pages/Members"));
+const Resources = lazy(() => import("./pages/Resources"));
+const History = lazy(() => import("./pages/History"));
+const Standings = lazy(() => import("./components/standings/Standings"));
+const Podcasts = lazy(() => import("./components/podcasts/Podcasts"));
+const Schedules = lazy(() => import("./components/schedules/Schedules"));
+const DraftList = lazy(() => import("./components/drafts/DraftList"));
+const PreviousChampions = lazy(() =>
+  import("./components/previousChampions/PreviousChampions")
+);
+const LeagueTransactions = lazy(() =>
+  import("./components/transactions/LeagueTransactions")
+);
+const Punishment = lazy(() => import("./components/punishments/Punishment"));
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
@@ -27,29 +33,26 @@ const router = createBrowserRouter(
       <Route path="/resources" element={<Resources />} />
       <Route path="/standings" element={<Standings />} />
       <Route path="/schedules" element={<Schedules />} />
-      <Route path="/transactions" element={<LeagueTrans />} />
-      <Route path="/league-leaders" />
-      <Route path="/trade-block" />
+      <Route path="/transactions" element={<LeagueTransactions />} />
       <Route path="/league-punishments" element={<Punishment />} />
       <Route path="/past-champions" element={<PreviousChampions />} />
-      <Route path="/draft-classes" element={<Drafts />} />
-      <Route path="/records" />
+      <Route path="/draft-classes" element={<DraftList />} />
       <Route path="/podcasts" element={<Podcasts />} />
     </Route>
   ),
   {
     future: {
-      v7_relativeSplatPath: true,
-      v7_fetcherPersist: true,
-      v7_normalizeFormMethod: true,
-      v7_partialHydration: true,
       v7_startTransition: true,
     },
   }
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
+  );
 }
 
 export default App;
