@@ -2,7 +2,7 @@ import "../memberItems/MemberItems.css";
 import PropTypes from "prop-types";
 
 const MemberModal = ({ member, onClose }) => {
-  if (!member) return null;
+  if (!member) return null; // If no member data is available, return null
 
   return (
     <div key={member.id} className="member-modal" id={member.id}>
@@ -10,9 +10,10 @@ const MemberModal = ({ member, onClose }) => {
         <div className="modal-div">
           <h2 className="modal-content-header">{member.name}</h2>
         </div>
+
         <div className="modal-div">
-          <h3 className="modal-header">All Time Record</h3>
-          <p className="modal-content-text">{member.allTimeRecord}</p>
+          <h3 className="modal-header">Nickname</h3>
+          <p className="modal-content-text">{member.nickName}</p>
         </div>
 
         <div className="modal-div">
