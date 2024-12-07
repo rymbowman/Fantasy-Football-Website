@@ -7,6 +7,7 @@ import LoadMoreBtn from "./LoadMoreBtn";
 import { useFetchTransactions } from "../../constants/customHooks/useFetchTransactions";
 import { useFetchPlayers } from "../../constants/customHooks/useFetchPlayers";
 import { useFetchTeams } from "../../constants/customHooks/useFetchTeams";
+import Spinner from "../loading/Spinner";
 
 const LeagueTransactions = () => {
   const { teams, loading: teamsLoading, error: teamsError } = useFetchTeams();
@@ -24,8 +25,7 @@ const LeagueTransactions = () => {
   const [displayedCount, setdisplayedCount] = useState(10);
   const [viewType, setViewType] = useState("all");
 
-  if (playersLoading || transactionsLoading || teamsLoading)
-    return <div>Loading...</div>;
+  if (playersLoading || transactionsLoading || teamsLoading) return <Spinner />;
   if (playersError || transactionsError || teamsError)
     return <div>Error loading data</div>;
 

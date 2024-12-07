@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import Spinner from "./components/loading/Spinner";
 const LeagueInfo = lazy(() => import("./pages/LeagueInfo"));
 const Members = lazy(() => import("./pages/Members"));
 const Resources = lazy(() => import("./pages/Resources"));
@@ -49,7 +50,7 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Spinner />}>
       <RouterProvider router={router} />
     </Suspense>
   );

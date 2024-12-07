@@ -2,6 +2,7 @@ import TeamSchedule from "./TeamSchedule";
 import "../schedules/Schedules.css";
 import PageHeader from "../pageHeaders/PageHeader";
 import { useFetchSchedules } from "../../constants/customHooks/useFetchSchedules";
+import Spinner from "../loading/Spinner";
 
 const Schedules = () => {
   const totalWeeks = 14;
@@ -17,7 +18,7 @@ const Schedules = () => {
   } = useFetchSchedules(totalWeeks);
 
   if (loading) {
-    return <div>Loading Schedules ...</div>;
+    return <Spinner />;
   }
 
   if (error) {

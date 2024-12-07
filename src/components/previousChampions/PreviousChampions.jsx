@@ -5,6 +5,7 @@ import MatchupSummary from "./MatchupSummary";
 import MatchupBoxScore from "./MatchupBoxScore";
 import { useFetchLeaguesData } from "../../constants/customHooks/useFetchLeaguesData";
 import { useFetchPlayers } from "../../constants/customHooks/useFetchPlayers";
+import Spinner from "../loading/Spinner";
 
 const PreviousChampions = () => {
   const {
@@ -25,7 +26,7 @@ const PreviousChampions = () => {
   const memoizedLeaguesData = useMemo(() => leaguesData, [leaguesData]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Spinner />;
   }
 
   if (error) {

@@ -1,11 +1,12 @@
 import "../standings/Standings.css";
 import PageHeader from "../pageHeaders/PageHeader";
 import { useFetchStandings } from "../../constants/customHooks/useFetchStandings";
+import Spinner from "../loading/Spinner";
 
 const Standings = () => {
   const { teams, loading, error } = useFetchStandings();
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <Spinner />;
   if (error) return <div>Error loading data</div>;
 
   return (
