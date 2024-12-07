@@ -31,13 +31,27 @@ const DropdownNavbarIcon = ({
           <h6 className="navbar-dropdown-title">{page}</h6>
           {dropdownItems.map((item, index) => (
             <li className="navbar-dropdown-item" key={index}>
-              <Link
-                to={item.link}
-                className="dropdown-link"
-                onClick={toggleDropdown}
-              >
-                {item.label}
-              </Link>
+              {item.external ? (
+                <a
+                  href={item.link}
+                  className="dropdown-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleDropdown();
+                    window.open(item.link, "_blank", "noopener noreferrer");
+                  }}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  to={item.link}
+                  className="dropdown-link"
+                  onClick={toggleDropdown}
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
         </ul>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../navbar/Navbar.css";
 import "../../styles/App.css";
-import DropdownSidebarIcon from "./DropdownNavbarIcon";
+import DropdownNavbarIcon from "./DropdownNavbarIcon";
 import NavbarItem from "./NavbarItem";
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null); // Track which dropdown is active
@@ -33,7 +33,7 @@ const Navbar = () => {
           tooltip={"Members"}
           closeDropdown={closeDropdown}
         />
-        <DropdownSidebarIcon
+        <DropdownNavbarIcon
           link={"/league"}
           iconImage={"bx bxs-grid"}
           page="League"
@@ -47,7 +47,7 @@ const Navbar = () => {
           toggleDropdown={() => toggleDropdown(0)} // Pass toggle function
           closeDropdown={closeDropdown}
         />
-        <DropdownSidebarIcon
+        <DropdownNavbarIcon
           link={"/history"}
           iconImage={"bx bxs-book"}
           page="History"
@@ -61,14 +61,22 @@ const Navbar = () => {
           toggleDropdown={() => toggleDropdown(1)} // Pass toggle function
           closeDropdown={closeDropdown}
         />
-        <DropdownSidebarIcon
+        <DropdownNavbarIcon
           link={"/resources"}
           iconImage={"bx bxs-ball"}
           page="Resources"
           dropdownItems={[
-            { link: "/dynasty-rankings", label: "Dynasty Rankings" },
-            { link: "/podcasts", label: "Dynasty Podcasts" },
-            { link: "/trade-calc", label: "Trade Calculator" },
+            {
+              link: "https://www.footballguys.com/rankings/duration/dynasty?pos=all#more",
+              label: "Dynasty Rankings",
+              external: true,
+            },
+            { link: "/podcasts", label: "Dynasty Podcasts", external: false },
+            {
+              link: "https://dynastyleaguefootball.com/trade-analyzer/",
+              label: "Trade Calculator",
+              external: true,
+            },
           ]}
           tooltip={"Resources"}
           isActive={activeDropdown === 2} // Pass active state
