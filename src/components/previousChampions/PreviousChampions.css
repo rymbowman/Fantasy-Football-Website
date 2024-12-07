@@ -7,26 +7,195 @@
   transition: all 0.5s ease;
 }
 
-.champs-header-div {
+.champion-div {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
-  background: linear-gradient(135deg, #222, #3a3a3a);
-  height: 200px;
-  width: 100%;
 }
 
-.champs-h1 {
-  font-size: 54px;
+.champion-item {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.matchup-summary {
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
+  border: 2px solid #f39c12;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 70%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.matchup-summary:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.matchup-summary h2 {
   font-family: "Baskervville SC", serif;
+  font-size: 1.75em;
+  margin-bottom: 15px;
+  border-top: 3px solid #f39c12;
+  border-bottom: 3px solid #f39c12;
+  color: #071023;
+  width: fit-content;
+  padding: 10px 0;
+  margin: auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;
-  color: #d9e2f7;
-  border-bottom: 5px solid red;
+}
+
+.matchup-summary p {
+  font-family: "Baskervville SC", serif;
+  font-size: 1.1em;
+  margin: 10px 0;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.boxscore-btn {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Baskervville SC", serif;
+  font-size: 16px;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.boxscore-btn:hover {
+  background-color: #2980b9;
+}
+
+.matchup-box-score {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  margin: 10px 0;
+  background-color: #ecf0f1;
+}
+
+.boxscore-team-name {
+  font-family: "Baskervville SC", serif;
+  font-size: 1.2em;
+  color: #071023;
+  margin: 10px 0;
   text-align: center;
 }
 
+.team-stats {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  gap: 5px;
+  background-color: #f9f9f9;
+}
+
+.team-stats-winner {
+  border-radius: 8px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  gap: 5px;
+  background: linear-gradient(135deg, #f39c12, #f1c40f);
+  border: 2px solid #f39c12;
+}
+
+.starter {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 5px;
+  font-family: "Baskervville SC", serif;
+  background-color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 95%;
+}
+
+.starter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.starter-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.starter-info {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+  color: #071023;
+}
+
+.starter-name {
+  width: 65%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.starter-position {
+  font-weight: bold;
+  width: 15%;
+  font-size: 16px;
+  text-align: center;
+}
+
+.starter-points {
+  font-weight: bold;
+  color: #3498db;
+  font-size: 18px;
+  width: 20%;
+  display: flex;
+}
+
+.boxscore-total-points {
+  color: #3498db;
+  font-size: 18px;
+  display: flex;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  margin-left: auto;
+  border-top: 3px solid #071023;
+  letter-spacing: 1px;
+}
+
+.boxscore-total-points-winner {
+  color: #3498db;
+  font-size: 18px;
+  display: flex;
+  text-align: center;
+  border-top: 3px solid #071023;
+  padding: 5px;
+  margin: 5px;
+  margin-left: auto;
+  letter-spacing: 1px;
+}
 /* Tablet (Medium Screens) */
 @media (max-width: 1024px) {
 }
@@ -35,11 +204,44 @@
   .champs-h1 {
     font-size: 48px;
   }
+  .champion-item {
+    width: 95%;
+  }
+
+  .starter-img {
+    width: 45px;
+    height: 45px;
+  }
+  .starter-info {
+    font-size: 14px;
+  }
+  .starter-points {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 575px) {
   .champs-h1 {
     font-size: 44px;
+  }
+  .champion-div {
+    width: 100%;
+  }
+  .matchup-box-score {
+    width: 100%;
+  }
+  .starter-img {
+    width: 40px;
+    height: 40px;
+  }
+  .starter-info {
+    font-size: 14px;
+  }
+  .starter-points {
+    font-size: 16px;
+  }
+  .boxscore-total-points {
+    font-size: 16px;
   }
 }
 
@@ -47,5 +249,29 @@
 @media (max-width: 440px) {
   .champs-h1 {
     font-size: 36px;
+  }
+  .matchup-box-score {
+    flex-direction: column;
+    align-items: center;
+  }
+  .team-stats {
+    width: 85%;
+  }
+  .starter-img {
+    width: 45px;
+    height: 45px;
+  }
+  .starter-info {
+    font-size: 14px;
+  }
+  .starter-position {
+    width: 15%;
+  }
+  .starter-name {
+    width: 60%;
+  }
+  .starter-points {
+    font-size: 18px;
+    width: 25%;
   }
 }
