@@ -5,8 +5,6 @@ const LoadMoreBtn = ({
   transactions,
   loadMoreTransactions,
 }) => {
-  console.log("displayedCount:", displayedCount);
-  console.log("transactions length:", transactions);
   return (
     <>
       {displayedCount < transactions && (
