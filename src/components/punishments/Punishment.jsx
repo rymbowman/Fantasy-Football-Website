@@ -13,7 +13,7 @@ const Punishment = () => {
 
   return (
     <div className="punishments-container">
-      <PageHeader category={"punishments"} pageTitle={"League Punishments"} />
+      <PageHeader pageTitle={"League Punishments"} />
       {punishmentsData.map((punishment) => {
         return (
           <div

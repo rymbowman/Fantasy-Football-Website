@@ -3,7 +3,7 @@ import "../podcasts/Podcasts.css";
 const Podcasts = () => {
   return (
     <div className="podcasts-container">
-      <PageHeader category={"podcasts"} pageTitle={"Podcasts"} />
+      <PageHeader pageTitle={"Podcasts"} />
 
       <ul className="podcasts-list">
         <li className="podcast-li">

@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
-const PageHeader = ({ category, pageTitle }) => {
+import "../pageHeaders/PageHeader.css";
+
+const PageHeader = ({ pageTitle }) => {
   return (
-    <div className={`${category}-header-div`}>
-      <h1 className={`${category}-h1`}>{pageTitle}</h1>
+    <div className="header-div">
+      <h1 className="header-title">{pageTitle}</h1>
     </div>
   );
 };
