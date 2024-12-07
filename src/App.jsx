@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Spinner from "./components/loading/Spinner";
+import Error from "./pages/Error";
 const LeagueInfo = lazy(() => import("./pages/LeagueInfo"));
 const Members = lazy(() => import("./pages/Members"));
 const Resources = lazy(() => import("./pages/Resources"));
@@ -26,7 +27,7 @@ const Punishment = lazy(() => import("./components/punishments/Punishment"));
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<MainLayout />}>
+    <Route path="/" element={<MainLayout />} errorElement={<Error />}>
       <Route index element={<Homepage />} />
       <Route path="/league" element={<LeagueInfo />} />
       <Route path="/members" element={<Members />} />

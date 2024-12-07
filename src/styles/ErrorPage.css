@@ -1,0 +1,51 @@
+/* General Styles */
+body {
+  font-family: "Baskervville SC", serif;
+  background-color: #f0f2f5;
+  color: #071023;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Error Container */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  text-align: center;
+  background-color: #f0f2f5;
+}
+
+/* Error Title */
+.error-title {
+  font-size: 48px;
+  color: #d9534f; /* Red color */
+  margin-bottom: 20px;
+}
+
+/* Error Message */
+.error-message {
+  font-size: 18px;
+  color: #071023;
+  margin-bottom: 20px;
+}
+
+/* Error Button */
+.error-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #5bc0de; /* Blue color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Baskervville SC", serif;
+}
+
+.error-button:hover {
+  background-color: #31b0d5; /* Darker blue color */
+}
