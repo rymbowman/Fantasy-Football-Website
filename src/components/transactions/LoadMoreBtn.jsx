@@ -5,9 +5,11 @@ const LoadMoreBtn = ({
   transactions,
   loadMoreTransactions,
 }) => {
+  console.log("displayedCount:", displayedCount);
+  console.log("transactions length:", transactions);
   return (
     <>
-      {displayedCount < transactions.length && (
+      {displayedCount < transactions && (
         <button onClick={loadMoreTransactions} className="load-more">
           Load More
         </button>
