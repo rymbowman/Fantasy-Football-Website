@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchCurrentWeek } from "../sleeperApi";
+import { fetchCurrentWeek } from "../fetchRequests/sleeperApi";
 
 export const useFetchCurrentWeek = () => {
   const [currentWeek, setCurrentWeek] = useState(null);

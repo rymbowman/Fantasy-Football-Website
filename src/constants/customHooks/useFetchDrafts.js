@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { leagueId } from "../sleeperApi";
+import { leagueId } from "../fetchRequests/sleeperApi";
 import { useFetchPlayers } from "./useFetchPlayers";
 
 export const useFetchDrafts = () => {

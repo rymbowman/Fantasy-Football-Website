@@ -5,7 +5,7 @@ import {
   fetchRosters,
   fetchUsers,
   leagueId,
-} from "../sleeperApi";
+} from "../fetchRequests/sleeperApi";
 
 export const useFetchLeaguesData = (players) => {
   const [leaguesData, setLeaguesData] = useState([]);

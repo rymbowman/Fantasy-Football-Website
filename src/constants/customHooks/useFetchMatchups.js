@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchWeeklyMatchups } from "../sleeperApi";
+import { fetchWeeklyMatchups } from "../fetchRequests/sleeperApi";
 
 export const useFetchMatchups = (totalWeeks) => {
   const [schedule, setSchedule] = useState({});

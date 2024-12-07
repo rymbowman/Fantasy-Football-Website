@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { leagueId } from "../../constants/sleeperApi";
 import "../transactions/LeagueTransactions.css";
 import TransactionsHeader from "./TransactionsHeader";
 import TransactionList from "./TransactionList";
@@ -8,6 +7,7 @@ import { useFetchTransactions } from "../../constants/customHooks/useFetchTransa
 import { useFetchPlayers } from "../../constants/customHooks/useFetchPlayers";
 import { useFetchTeams } from "../../constants/customHooks/useFetchTeams";
 import Spinner from "../loading/Spinner";
+import { leagueId } from "../../constants/fetchRequests/sleeperApi";
 
 const LeagueTransactions = () => {
   const { teams, loading: teamsLoading, error: teamsError } = useFetchTeams();

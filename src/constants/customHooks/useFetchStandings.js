@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { leagueId } from "../sleeperApi";
+import { leagueId } from "../fetchRequests/sleeperApi";
 
 export const useFetchStandings = () => {
   const [teams, setTeams] = useState({});
