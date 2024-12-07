@@ -1,7 +1,9 @@
 import axios from "axios";
 
+// Current League ID for the 2024 season
 export const leagueId = "1048289149926760448";
 
+// Fetch each week's matchups for a league
 export const fetchWeeklyMatchups = async (totalWeeks) => {
   const promises = [];
   for (let week = 1; week <= totalWeeks; week++) {
@@ -20,6 +22,7 @@ export const fetchWeeklyMatchups = async (totalWeeks) => {
   return matchupsByWeek;
 };
 
+// Fetch Teams for a league
 export const fetchTeams = async () => {
   const resultRosters = await axios.get(
     `https://api.sleeper.app/v1/league/${leagueId}/rosters`
@@ -40,6 +43,7 @@ export const fetchTeams = async () => {
   return leagueTeams;
 };
 
+// Fetch the current week in the season
 export const fetchCurrentWeek = async () => {
   const resultsData = await axios.get("https://api.sleeper.app/v1/state/nfl");
   const currentLeagueState = resultsData.data;
@@ -47,6 +51,7 @@ export const fetchCurrentWeek = async () => {
   return currentWeek;
 };
 
+// Fetch a league's draft data
 export const fetchLeagueDrafts = async () => {
   const resultsData = await axios.get(
     `https://api.sleeper.app/v1/league/${leagueId}/drafts`
@@ -55,7 +60,7 @@ export const fetchLeagueDrafts = async () => {
   return leagueDrafts;
 };
 
-//for PreviousChampions component
+// Fetch a league's data
 export const fetchPreviousLeague = async (leagueId) => {
   const response = await axios.get(
     `https://api.sleeper.app/v1/league/${leagueId}`
@@ -63,6 +68,7 @@ export const fetchPreviousLeague = async (leagueId) => {
   return response.data;
 };
 
+// Fetch a league's rosters
 export const fetchRosters = async (leagueId) => {
   const response = await axios.get(
     `https://api.sleeper.app/v1/league/${leagueId}/rosters`
@@ -70,6 +76,7 @@ export const fetchRosters = async (leagueId) => {
   return response.data;
 };
 
+// Fetch a league's users
 export const fetchUsers = async (leagueId) => {
   const response = await axios.get(
     `https://api.sleeper.app/v1/league/${leagueId}/users`
@@ -77,6 +84,7 @@ export const fetchUsers = async (leagueId) => {
   return response.data;
 };
 
+// Fetch a league's matchups
 export const fetchMatchups = async (leagueId, week) => {
   const response = await axios.get(
     `https://api.sleeper.app/v1/league/${leagueId}/matchups/${week}`
@@ -84,6 +92,7 @@ export const fetchMatchups = async (leagueId, week) => {
   return response.data;
 };
 
+// Fetch all NFL players data from the Sleeper API
 export const fetchPlayers = async () => {
   try {
     const response = await axios.get("https://api.sleeper.app/v1/players/nfl");
