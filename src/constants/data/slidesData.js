@@ -25,7 +25,7 @@ const headlinesImgsData = [
   },
   {
     id: 5,
-    src: "src/assets/images/jesse.jpeg",
+    src: "src/assets/images/zach.jpeg",
     caption:
       "Team Jesse announces abrupt retirement following a difficult start to the season. Zach takes over for a franchise in turmoil. Can he right the ship?",
   },
