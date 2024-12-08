@@ -52,9 +52,9 @@ const Navbar = () => {
           iconImage={"bx bxs-book"}
           page="History"
           dropdownItems={[
-            { link: "/past-champions", label: "Past Champions" },
-            { link: "/league-punishments", label: "League Punishments" },
-            { link: "/draft-classes", label: "Draft Classes" },
+            { link: "/past-champions", label: "Champions" },
+            { link: "/league-punishments", label: "Punishments" },
+            { link: "/draft-classes", label: "Drafts" },
           ]}
           tooltip={"History"}
           isActive={activeDropdown === 1} // Pass active state
@@ -71,7 +71,7 @@ const Navbar = () => {
               label: "Dynasty Rankings",
               external: true,
             },
-            { link: "/podcasts", label: "Dynasty Podcasts", external: false },
+            { link: "/podcasts", label: "Podcasts", external: false },
             {
               link: "https://dynastyleaguefootball.com/trade-analyzer/",
               label: "Trade Calculator",
