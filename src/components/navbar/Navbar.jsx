@@ -15,11 +15,7 @@ const Navbar = () => {
   };
   return (
     <div className="navbar">
-      <img
-        src="src/assets/images/Liberty_Flames_logo.svg copy.png"
-        alt=""
-        className="liberty-logo"
-      />
+      <img src="/assets/images/lu-logo.png" alt="" className="liberty-logo" />
       <div className="navbar-items">
         <NavbarItem
           link={"/"}

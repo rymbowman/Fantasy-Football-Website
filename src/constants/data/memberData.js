@@ -23,7 +23,7 @@ const memberData = [
       "Ryans mission is clear: to dismantle Carters team and maintain a stronghold over Jose, keeping him marooned on Bowman Island. This competitive spirit drives Ryan to constantly seek improvements, analyze matchups meticulously, and make bold moves that keep his rivals on their toes.",
       "Ryans passion for humbling Carter and Jose drives a relentless pursuit of excellence and his unwavering commitment to achieving fantasy football supremacy. It is this determination that fuels his every move, from draft day decisions to weekly lineup adjustments.",
     ],
-    img: "src/assets/images/ryan.jpeg",
+    img: "/assets/images/ryan.jpeg",
   },
   {
     id: 2,
@@ -49,7 +49,7 @@ const memberData = [
       "Cole’s mission is clear: to rise from the ashes of a grueling tanking season and reclaim his status as a top contender. With Caleb Williams as the centerpiece of his rebuild, Cole is determined to turn his franchise around and silence the critics who doubted his vision. Each move he makes is aimed at crafting a roster capable of sustained success, but his future hinges on the performance of Jose, who holds the keys to Cole's draft capital. Navigating this delicate balance, Cole is laser-focused on building a team that not only competes but dominates in the seasons to come.",
       "In addition to his long-term aspirations, Cole has two immediate goals that fuel his competitive fire. First, he seeks to defeat his brother and greatest rival, Ryan, in their ongoing battle for South Jersey supremacy. Second, he is desperate to avoid the league’s infamous yearly punishment, a fate that looms large for any manager who falls short. With Caleb Williams leading the charge and his sights set high, Cole is ready to write a new chapter in his fantasy legacy—one defined by redemption, rivalry, and triumph.",
     ],
-    img: "src/assets/images/cole.jpeg",
+    img: "/assets/images/cole.jpeg",
   },
 
   {
@@ -76,7 +76,7 @@ const memberData = [
       "Miah is driven by an unyielding desire to maintain his dominance in the league, crafting a legacy of excellence that he plans to hand down to his eldest son. His motivation extends beyond victory—he is determined to surpass Carter and establish himself as the league’s true perennial powerhouse. With a strategic mind and an unrelenting will to win, Miah remains steadfast in his mission to consistently outmaneuver his rivals, especially his long-standing target, Jose. Every move he makes is calculated to secure his position at the pinnacle of the league for years to come.",
       "Despite the departure of one of his most reliable “donors,” Jesse, Miah remains undeterred, ready to recalibrate and execute a new path to success. His adaptability and focus allow him to pivot as needed while maintaining his unrelenting quest for domination. Fueled by a competitive spirit and a vision for the future, Miah is committed to ensuring that his reign continues until his son is ready to carry the torch and uphold the family legacy of crushing the competition.",
     ],
-    img: "src/assets/images/miah.jpeg",
+    img: "/assets/images/miah.jpeg",
   },
   {
     id: 4,
@@ -102,7 +102,7 @@ const memberData = [
       "Carter’s mission is to reclaim the throne of the league and restore his reign of dominance. After a brief stretch of challenging seasons, his focus is sharper than ever as he aims to prove his rightful place at the top. Central to this pursuit is his desire to decisively crush his long-time rival Miah, reaffirming his supremacy in their storied rivalry. Fueled by strategy and unyielding determination, Carter is determined to show that his nickname “Thanos” was no fluke but a reflection of his enduring strength.",
       "At the same time, Carter is committed to reminding Jose and the combined force of Jacob/Kyle who their superior truly is, keeping their teams firmly under his thumb. His approach blends fierce competitiveness with trademark bravado, ensuring that his presence looms large in the league regardless of the standings. Fueled by his legacy and the drive to remain a perennial contender, Carter's mission is to maintain his status as one of the most formidable forces the league has ever seen.",
     ],
-    img: "src/assets/images/carter.jpeg",
+    img: "/assets/images/carter.jpeg",
   },
   {
     id: 5,
@@ -128,7 +128,7 @@ const memberData = [
       "Jacob's mission is to climb out of the league's depths and break into the coveted top five, proving that even the most beleaguered franchises can rise again. With Bryce Young as his cornerstone and Kyle as a trusted co-manager, Jacob is committed to a patient and calculated rebuild, aiming to restore his team to fantasy relevancy. Each move he makes is part of a larger strategy to transform his squad into a competitive force, capable of contending with the league's giants.",
       "Beyond the standings, Jacob is deeply passionate about maintaining the brotherly bonds that make the league more than just a competition. He values the connections with his league mates, striving to foster camaraderie and mutual respect, even amidst the trash talk and rivalries. For Jacob, the journey is about more than just wins—it's about building a legacy of resilience, connection, and eventual redemption.",
     ],
-    img: "src/assets/images/jacob.jpeg",
+    img: "/assets/images/jacob.jpeg",
   },
   {
     id: 6,
@@ -153,7 +153,7 @@ const memberData = [
     mission: [
       "Kyle’s mission is to be a loyal and supportive partner to Jacob, continually working on their communication and teamwork to build a winning fantasy football team. He is determined to avoid the shame of ever having to pay for a fantasy punishment, focusing instead on strategic decisions that lead to success. With a commitment to turning around their team’s fortunes, Kyle is dedicated to helping Jacob escape his fantasy misery and, together, rise to the top of the league.",
     ],
-    img: "src/assets/images/kyle.jpeg",
+    img: "/assets/images/kyle.jpeg",
   },
   {
     id: 7,
@@ -179,7 +179,7 @@ const memberData = [
       "Jose’s mission is to break free from the confines of Bowman Island and secure a permanent spot among the league’s top 5, a position that will allow him to compete for a championship year after year. With a keen eye for talent and the ability to draft well, Jose aims to build a team with staying power that can contend with the best. While his team’s early years have been marred by lopsided trades and missed opportunities, he is determined to overcome these setbacks and eventually claim the league’s ultimate prize: a championship.",
       "Though not rivals, Jose shares a close friendship with Simon, and they’ve got each other’s backs in group chat spats and bets. Their bond, rooted in their mutual Patriots fandom, has kept them connected throughout the league’s history. With no true rival but frequent bitter spats with Cole, Jose’s focus remains squarely on winning a title and ensuring his team’s long-term success in the league.",
     ],
-    img: "src/assets/images/jose.jpeg",
+    img: "/assets/images/jose.jpeg",
   },
   {
     id: 8,
@@ -205,7 +205,7 @@ const memberData = [
       "Jesse’s mission, though currently outside the fantasy football arena, is to continue impacting lives through his pastoral and college ministry in Cleveland while remaining a beloved figure in league lore. His sudden retirement in 2024, reminiscent of Andrew Luck's shocking departure, left a void in the league, but there remains hope among his former competitors that he will one day return to reclaim his spot.",
       "Until that day, Jesse’s legacy in the league lives on through his unforgettable moments, his unique approach to trades, and the inspiration he provides both on and off the field. Whether as a participant or an honored retiree, his influence remains deeply felt, and the door is always open for his comeback.",
     ],
-    img: "src/assets/images/jesse.jpeg",
+    img: "/assets/images/jesse.jpeg",
   },
   {
     id: 9,
@@ -231,7 +231,7 @@ const memberData = [
       "Micah’s mission is to break free from the cycle of mediocrity and set his sights firmly on securing his first championship. Though his journey has been marked by fluctuations between the league’s top 5 and bottom 5, he is determined to build a team capable of sustained success. Whether the ultimate prize is years away or closer than anticipated, Micah remains committed to refining his strategy, learning from past mistakes, and leveraging his passion for the game to rise above the middle of the pack.",
       "Fueled by his loyalty to the Chiefs and a competitive drive, Micah is focused on constructing a roster that balances immediate impact with long-term potential. While the road ahead may be unpredictable, his determination to climb the league standings and claim a championship keeps him motivated each season.",
     ],
-    img: "src/assets/images/micah.jpeg",
+    img: "/assets/images/micah.jpeg",
   },
   {
     id: 10,
@@ -257,7 +257,7 @@ const memberData = [
       "Simon’s mission is to establish long-term dominance in the league, leveraging his deep pool of draft picks and strategic trades to remain a top contender for years to come. With a roster built for both immediate success and sustained competitiveness, he is focused on solidifying his position among the league’s elite. Simon is also a vocal advocate for significantly expanding taxi squads, a move that aligns perfectly with his penchant for hoarding picks and nurturing young talent.",
       "Determined to stay ahead of the competition, Simon aims to combine his calculated approach to trades and drafting with a push for league-wide changes that benefit his strategic vision. His goal is not just to win championships but to shape the league into one where his mastery of the game ensures continued success and dominance.",
     ],
-    img: "src/assets/images/simon.jpeg",
+    img: "/assets/images/simon.jpeg",
   },
   {
     id: 11,
@@ -283,7 +283,7 @@ const memberData = [
       "Josh’s mission is to secure his first fantasy championship and proudly add it to his already impressive trophy case of intramural championships. With a strategic approach to trades and a knack for finding value, he aims to build a team capable of competing at the highest level. Josh is determined to break free from the cycle of inconsistency and establish himself as a perennial contender in the league.",
       "Balancing patience and ambition, he seeks to capitalize on opportunities to elevate his roster while maintaining his even-keeled demeanor. Whether his championship moment is just around the corner or further down the road, Josh’s focus remains on bringing home the ultimate prize and solidifying his legacy within the league.",
     ],
-    img: "src/assets/images/josh.jpeg",
+    img: "/assets/images/josh.jpeg",
   },
   {
     id: 12,
@@ -301,7 +301,7 @@ const memberData = [
       "Zach's mission is to jump into 'win-now' mode and prove that he can quickly transform his newly inherited roster into a contender. Driven by the desire to claim success in his inaugural season, he aims to build a competitive team that can rival the league's top players. However, this high-risk, high-reward approach may come back to haunt him if he isn’t careful. Zach would do well to learn from Jacob and Jose, understanding the cost of sacrificing the future for a fleeting rush of immediate success.",
       "While his ambition is undeniable, balancing short-term victories with long-term sustainability will be key to avoiding the pitfalls of impulsive trades and roster moves. With valuable lessons to be learned from the veterans of the league, Zach’s journey is just beginning, and only time will tell whether his win-now mentality will lead to a championship or leave him with a regrettable roster in the years to come.",
     ],
-    img: "src/assets/images/zach.jpeg",
+    img: "/assets/images/zach.jpeg",
   },
 ];
 

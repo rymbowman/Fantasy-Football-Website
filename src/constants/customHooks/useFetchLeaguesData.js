@@ -53,6 +53,7 @@ export const useFetchLeaguesData = (players) => {
           leagueId,
           championshipWeek
         );
+        console.log(championshipMatchups);
 
         const championshipMatchup = championshipMatchups.filter(
           (matchup) => matchup.matchup_id === 1

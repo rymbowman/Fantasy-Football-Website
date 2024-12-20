@@ -1,0 +1,1 @@
+import{r as t}from"./index-DnSvBsN8.js";import{h as u}from"./sleeperApi-BE8q_8nq.js";const l=()=>{const[e,s]=t.useState({}),[r,a]=t.useState(!0),[o,c]=t.useState(null);return t.useEffect(()=>{try{u().then(s)}catch(n){c(n)}finally{a(!1)}},[]),{teams:e,loading:r,error:o}};export{l as u};

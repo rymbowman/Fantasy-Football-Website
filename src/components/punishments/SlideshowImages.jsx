@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import "../../constants/data/punishmentsData";
+// import "../../constants/data/punishmentsData";
 import PropTypes from "prop-types";
 import "../punishments/Punishment.css";
 
