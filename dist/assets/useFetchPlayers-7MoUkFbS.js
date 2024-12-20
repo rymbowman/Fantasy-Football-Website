@@ -1,1 +1,0 @@
-import{r as t}from"./index-BpZPu7cu.js";import{i as l}from"./sleeperApi-B8G7RgNv.js";const i=()=>{const[r,s]=t.useState([]),[a,o]=t.useState(!0),[c,n]=t.useState(null);return t.useEffect(()=>{(async()=>{try{const e=await l();s(e)}catch(e){n(e)}finally{o(!1)}})()},[]),{players:r,loading:a,error:c}};export{i as u};

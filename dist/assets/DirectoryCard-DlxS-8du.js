@@ -1,1 +1,0 @@
-import{P as s,j as i,L as t}from"./index-BpZPu7cu.js";const e=r=>i.jsx(i.Fragment,{children:i.jsx(t,{to:r.link,className:"card-pathways",id:r.id,children:i.jsx("div",{children:i.jsx("h3",{className:"card-heading",children:r.title})})})});e.propTypes={link:s.string,id:s.string,title:s.string};export{e as D};
