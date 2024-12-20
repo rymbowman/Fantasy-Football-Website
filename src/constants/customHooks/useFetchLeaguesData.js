@@ -4,7 +4,7 @@ import {
   fetchPreviousLeague,
   fetchRosters,
   fetchUsers,
-  leagueId,
+  previousLeagueId as leagueId,
 } from "../fetchRequests/sleeperApi";
 
 export const useFetchLeaguesData = (players) => {

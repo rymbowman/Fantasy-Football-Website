@@ -1,7 +1,9 @@
 import axios from "axios";
 
 // Current League ID for the 2024 season
-export const leagueId = "918270675058634752";
+export const leagueId = "1048289149926760448";
+// Previous League ID for the 2023 season
+export const previousLeagueId = "918270675058634752";
 
 // Fetch each week's matchups for a league
 export const fetchWeeklyMatchups = async (totalWeeks) => {
