@@ -1,6 +1,7 @@
 import DirectoryCard from "../components/directoryCards/DirectoryCard";
 import PageHeader from "../components/pageHeaders/PageHeader";
 import "../styles/HistoryPage.css";
+import "../styles/LeagueSplashPages.css";
 const History = () => {
   return (
     <div className="directory-pages">
