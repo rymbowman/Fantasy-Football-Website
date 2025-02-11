@@ -1,10 +1,10 @@
 import punishmentsData from "../../constants/data/punishmentsData";
 import PageHeader from "../pageHeaders/PageHeader";
-import "../punishments/Punishment.css";
+import "./Punishment.css";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import SlideshowImages from "./slideshowImages";
+import SlideshowImages from "./SlideshowImages";
 
 const Punishment = () => {
   useEffect(() => {

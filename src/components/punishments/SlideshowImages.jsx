@@ -19,7 +19,7 @@ const SlideshowImages = ({ images }) => {
           newSlideIndex = images.length - 1;
         }
         setCurrentSlideIndex(newSlideIndex);
-        setFadeClass("fade-in"); // Add fade-in class after slide change
+        setFadeClass("fade-in");
       }, 500);
     },
     [currentSlideIndex, images.length]
