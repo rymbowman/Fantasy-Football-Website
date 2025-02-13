@@ -1,6 +1,6 @@
 .homepage-header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
-    url(https://www.liberty.edu/news/wp-content/uploads/sites/137/2023/01/20221022_7452TP.jpg);
+    url("../../../assets/images/liberty\ background\ img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: auto;
