@@ -15,15 +15,14 @@ export const useFetchLeaguesData = (players) => {
   useEffect(() => {
     const fetchLeagueData = async (leagueId) => {
       try {
-        const league = await fetchPreviousLeague(leagueId);
-
-        // Fetch data for the previous league (2023 season)
-        const rosters = await fetchRosters(leagueId);
-        const users = await fetchUsers(leagueId);
-
-        // Fetch matchups for both week 16 and week 17
-        const matchupsWeek16 = await fetchMatchups(leagueId, 16);
-        const matchupsWeek17 = await fetchMatchups(leagueId, 17);
+        const [league, rosters, users, matchupsWeek16, matchupsWeek17] =
+          await Promise.all([
+            fetchPreviousLeague(leagueId),
+            fetchRosters(leagueId),
+            fetchUsers(leagueId),
+            fetchMatchups(leagueId, 16),
+            fetchMatchups(leagueId, 17),
+          ]);
 
         // Determine the championship week
         const week16MatchupIds = new Set(
@@ -34,12 +33,12 @@ export const useFetchLeaguesData = (players) => {
         );
 
         let championshipWeek = null;
+
         if (week16MatchupIds.size <= 3) {
           championshipWeek = 16;
         } else if (week17MatchupIds.size <= 3) {
           championshipWeek = 17;
         }
-
         if (!championshipWeek) {
           console.error(
             `No championship week found in the ${league.season} league year.`
@@ -53,8 +52,6 @@ export const useFetchLeaguesData = (players) => {
           leagueId,
           championshipWeek
         );
-        console.log(championshipMatchups);
-
         const championshipMatchup = championshipMatchups.filter(
           (matchup) => matchup.matchup_id === 1
         );
@@ -67,42 +64,39 @@ export const useFetchLeaguesData = (players) => {
         const team1 = championshipMatchup[0];
         const team2 = championshipMatchup[1];
 
-        let champRoster, champUser, champPoints;
-        let runnerUpRoster, runnerUpUser, runnerUpPoints;
+        const getRosterAndUser = (team) => {
+          const roster = rosters.find((r) => r.roster_id === team.roster_id);
+          const user = users.find((u) => u.user_id === roster.owner_id);
+          return { roster, user, points: team.points };
+        };
 
-        if (team1.points > team2.points) {
-          champRoster = rosters.find(
-            (roster) => roster.roster_id === team1.roster_id
-          );
-          champUser = users.find(
-            (user) => user.roster_id === champRoster.owner_id
-          );
-          champPoints = team1.points;
+        const {
+          roster: champRoster,
+          user: champUser,
+          points: champPoints,
+        } = team1.points > team2.points
+          ? getRosterAndUser(team1)
+          : getRosterAndUser(team2);
+        const {
+          roster: runnerUpRoster,
+          user: runnerUpUser,
+          points: runnerUpPoints,
+        } = team1.points > team2.points
+          ? getRosterAndUser(team2)
+          : getRosterAndUser(team1);
 
-          runnerUpRoster = rosters.find(
-            (roster) => roster.roster_id === team2.roster_id
-          );
-          runnerUpUser = users.find(
-            (user) => user.user_id === runnerUpRoster.owner_id
-          );
-          runnerUpPoints = team2.points;
-        } else {
-          champRoster = rosters.find(
-            (roster) => roster.roster_id === team2.roster_id
-          );
-          champUser = users.find(
-            (user) => user.user_id === champRoster.owner_id
-          );
-          champPoints = team2.points;
-
-          runnerUpRoster = rosters.find(
-            (roster) => roster.roster_id === team1.roster_id
-          );
-          runnerUpUser = users.find(
-            (user) => user.user_id === runnerUpRoster.owner_id
-          );
-          runnerUpPoints = team1.points;
-        }
+        const getTeamStats = (team) => {
+          team.starters.map((playerId, index) => ({
+            position: players[playerId]?.position,
+            team: players[playerId]?.team,
+            name:
+              players[playerId]?.first_name && players[playerId]?.last_name
+                ? `${players[playerId].first_name} ${players[playerId].last_name}`
+                : "unknown player",
+            points: team.starters_points[index],
+            playerId: playerId,
+          }));
+        };
 
         if (!champUser) {
           console.error(
@@ -116,13 +110,6 @@ export const useFetchLeaguesData = (players) => {
           );
         }
 
-        const champTeam = championshipMatchup.find(
-          (matchup) => matchup.roster_id === champRoster.roster_id
-        );
-        const runnerUpTeam = championshipMatchup.find(
-          (matchup) => matchup.roster_id === runnerUpRoster.roster_id
-        );
-
         return {
           year: league.season,
           champion: {
@@ -130,30 +117,18 @@ export const useFetchLeaguesData = (players) => {
               ? champUser.display_name || champUser.username
               : "miahpersson",
             points: champPoints,
-            stats: champTeam.starters.map((playerId, index) => ({
-              position: players[playerId]?.position,
-              team: players[playerId]?.team,
-              name:
-                players[playerId]?.first_name && players[playerId]?.last_name
-                  ? `${players[playerId].first_name} ${players[playerId].last_name}`
-                  : "unknown player",
-              points: champTeam.starters_points[index],
-              playerId: playerId,
-            })),
+            stats: getTeamStats(
+              team1.points > team2.points ? team1 : team2,
+              champRoster
+            ),
           },
           runnerUp: {
             username: runnerUpUser.display_name || runnerUpUser.username,
             points: runnerUpPoints,
-            stats: runnerUpTeam.starters.map((playerId, index) => ({
-              position: players[playerId]?.position,
-              team: players[playerId]?.team,
-              name:
-                players[playerId]?.first_name && players[playerId]?.last_name
-                  ? `${players[playerId].first_name} ${players[playerId].last_name}`
-                  : "unknown player",
-              points: runnerUpTeam.starters_points[index],
-              playerId: playerId,
-            })),
+            stats: getTeamStats(
+              team1.points > team2.points ? team2 : team1,
+              runnerUpRoster
+            ),
           },
           previousLeagueId: league.previous_league_id,
         };
