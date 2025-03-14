@@ -86,7 +86,7 @@ export const useFetchLeaguesData = (players) => {
           : getRosterAndUser(team1);
 
         const getTeamStats = (team) => {
-          team.starters.map((playerId, index) => ({
+          return team.starters.map((playerId, index) => ({
             position: players[playerId]?.position,
             team: players[playerId]?.team,
             name:
